@@ -37,12 +37,13 @@ public class npcController : MonoBehaviour
     {
         if (Vector3.Distance(transform.position ,WalkingPoints[index].position) < minDistance)
         {
-            if (index > 0 && index < WalkingPoints.Length)
+            if (index != WalkingPoints.Length - 1)
             {
                 index += 1;
             }
             else 
             {
+                Debug.Log("Set 0");
                 index = 0;
             }
                
