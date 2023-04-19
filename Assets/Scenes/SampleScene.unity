@@ -2600,7 +2600,7 @@ MonoBehaviour:
   - {fileID: 6412373124797409490}
   - {fileID: 6412373123242266807}
   steerPower: 35
-  motorPower: 250
+  motorPower: 500
   rb: {fileID: 0}
   CenterOfMass: {fileID: 6412373123261783778}
 --- !u!1 &6412373124505381608
