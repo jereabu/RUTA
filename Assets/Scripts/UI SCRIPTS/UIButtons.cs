@@ -32,10 +32,10 @@ public class UIButtons : MonoBehaviour
     {
         SceneManager.LoadScene(Scene);
     }
-
+   
     public void OpenModeSelector(bool state)
     {
-        for (int i = 0; i < UIElements.Length; i++)
+        for (int i = 0; i < UIElements.Length; i++) 
         {
             UIElements[i].SetActive(state);
         }
