@@ -13,7 +13,7 @@ public class UIButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UIElements = GameObject.FindGameObjectsWithTag("UIButtons");
+        UIElements = GameObject.FindGameObjectsWithTag("MenuUI");
         MODES = GameObject.FindGameObjectsWithTag("MODES");
         MLES_1 = GameObject.FindGameObjectsWithTag("MLES_1");
 

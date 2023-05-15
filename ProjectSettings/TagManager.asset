@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - HumanNPC
+  - MODES
+  - UIButtons
+  - MLES_1
+  - MenuUI
   layers:
   - Default
   - TransparentFX
