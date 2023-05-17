@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 1280817886786810924}
   - component: {fileID: 6321511423856491430}
   m_Layer: 5
-  m_Name: Button
+  m_Name: btn_IniciarNivel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.253115, g: 0.66710174, b: 0.6792453, a: 1}
+  m_Color: {r: 0.35617658, g: 0.7634325, b: 0.8679245, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -599,7 +599,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 83e539c12903c844fac9c2cfff3f5704, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 194b11e2bdefc2341a9d1d88734560cf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
