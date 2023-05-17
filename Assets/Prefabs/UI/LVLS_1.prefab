@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2498879393700220159}
   m_Layer: 0
-  m_Name: MLES_1
-  m_TagString: Untagged
+  m_Name: LVLS_1
+  m_TagString: LVLS_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -644,7 +644,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Barraza
+  m_Text: 'Caracol
 
 '
 --- !u!1 &7786592202194575720
