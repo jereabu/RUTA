@@ -17,7 +17,7 @@ public class CamController : MonoBehaviour
         var mousePos = Input.mousePosition;
         mousePos.x -= Screen.width / 2;
         mousePos.y -= Screen.height / 2;
-        Debug.Log(mousePos);
+        //Debug.Log(mousePos);
         Camera.transform.localRotation = Quaternion.Euler(-mousePos.y / 20, mousePos.x / 10, 0);
     }
 }
