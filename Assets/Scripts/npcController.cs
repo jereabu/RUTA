@@ -13,7 +13,7 @@ public class npcController : MonoBehaviour
     private Transform[] WalkingPoints;
 
     public int index = 0;
-
+    
     public float minDistance = 1; 
 
     void Start()

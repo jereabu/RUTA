@@ -9,6 +9,8 @@ TagManager:
   - UIButtons
   - MLES_1
   - MenuUI
+  - TrafficLVertical
+  - TrafficLHorizontal
   layers:
   - Default
   - TransparentFX
