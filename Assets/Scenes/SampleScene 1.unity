@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2720,15 +2720,19 @@ MonoBehaviour:
   steerPower: 35
   motorPower0: -10
   motorPower: 500
-  motorPower1: 20
-  motorPower2: 40
-  motorPower3: 60
-  motorPower4: 80
-  motorPower5: 100
+  motorPower1: 50
+  motorPower2: 70
+  motorPower3: 90
+  motorPower4: 110
+  motorPower5: 130
   rb: {fileID: 0}
   CenterOfMass: {fileID: 6412373123261783778}
-  speed: 0
+  posicion: {x: 0, y: 0, z: 0}
+  motorSpeed: 0
   cambio: 1
+  cambiable: 0
+  frenable: 0
+  cambiazo: 0
 --- !u!1 &6412373124505381608
 GameObject:
   m_ObjectHideFlags: 0
