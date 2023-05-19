@@ -39,10 +39,11 @@ public class Controller : MonoBehaviour
             rb.transform.Translate(000,10,000);
         }
 
-        if (Input.GetKeyDown(KeyCode.W) == false && Input.GetKey(KeyCode.E) && cambiable && cambio < 5)
+        if (!Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.E) && cambiable && cambio < 5)
         {
             Debug.Log("CAMBIAZOOO");
-            cambiazo = true;
+            cambio++;
+            //cambiazo = true;
         }
         else if (cambio >= 5)
         {
