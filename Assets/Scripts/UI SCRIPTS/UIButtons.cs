@@ -116,27 +116,27 @@ public class UIButtons : MonoBehaviour
         }
     }
     public void OpenDescriptionNivel2Selector(bool state)
+    {
+        for (int i = 0; i < UIElements.Length; i++)
         {
-            for (int i = 0; i < UIElements.Length; i++)
-            {
-                UIElements[i].SetActive(state);
-            }
-            for (int i = 0; i < DLVL_2!.Length; i++)
-            {
-                DLVL_2[i].SetActive(!state);
-            }
-            for (int i = 0; i < LVLS_1.Length; i++)
-            {
-                LVLS_1[i].SetActive(false);
-            }
-            for (int i = 0; i < MODES.Length; i++)
-            {
-                MODES[i].SetActive(false);
-            }
-            for (int i = 0; i < DLVL_1.Length; i++)
-            {
-                DLVL_1[i].SetActive(false);
-            }
+            UIElements[i].SetActive(state);
         }
+        for (int i = 0; i < DLVL_2!.Length; i++)
+        {
+            DLVL_2[i].SetActive(!state);
+        }
+        for (int i = 0; i < LVLS_1.Length; i++)
+        {
+            LVLS_1[i].SetActive(false);
+        }
+        for (int i = 0; i < MODES.Length; i++)
+        {
+            MODES[i].SetActive(false);
+        }
+        for (int i = 0; i < DLVL_1.Length; i++)
+        {
+            DLVL_1[i].SetActive(false);
+        }
+    }
 }
 
