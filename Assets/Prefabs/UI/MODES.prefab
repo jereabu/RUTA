@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 8106193179674609402}
   - component: {fileID: 2101851958323991104}
   m_Layer: 5
-  m_Name: Button
+  m_Name: btn_ModoLibre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,8 +141,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 185, y: -80.37516}
-  m_SizeDelta: {x: 220.7133, y: 41.3838}
+  m_AnchoredPosition: {x: 185, y: -80}
+  m_SizeDelta: {x: 255, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7709472516280923891
 CanvasRenderer:
@@ -429,7 +429,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Modo libre
+  m_text: 'Modo Libre
 
 '
   m_isRightToLeft: 0
@@ -567,8 +567,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -103.93227, y: 142}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 77, y: 104}
+  m_SizeDelta: {x: 585.7206, y: 42.7132}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7102704422502957535
 CanvasRenderer:
@@ -598,7 +598,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Selecciona el tipo de modo
+  m_text: Selecciona el modo de juego
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -780,8 +780,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -185, y: -81.754616}
-  m_SizeDelta: {x: 220.7133, y: 41.3838}
+  m_AnchoredPosition: {x: -185, y: -80}
+  m_SizeDelta: {x: 255, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8078534132251428715
 CanvasRenderer:
