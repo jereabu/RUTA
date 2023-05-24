@@ -7,7 +7,7 @@ public class Test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        public string[] Judios;
+        //public string[] Js;
     }
 
     // Update is called once per frame

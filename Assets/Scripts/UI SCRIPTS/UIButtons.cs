@@ -10,9 +10,10 @@ public class UIButtons : MonoBehaviour
     [SerializeField] GameObject[] LVLS_1; //Nivel Selector UI 
     [SerializeField] GameObject[] DLVL_1; //Description Nivel1 Selector UI 
     [SerializeField] GameObject[] DLVL_2; //Description Nivel2 Selector UI 
-    [SerializeField] GameObject[] Total;
-    [SerializeField] GameObject[] PreviousArray;
-    string PreviousScene = "MenuUI";
+    
+    
+
+    //string PreviousScene;
 
     // Start is called before the first frame update
     void Start()
@@ -70,8 +71,7 @@ public class UIButtons : MonoBehaviour
             DLVL_2[i].SetActive(false);
         }
 
-        PreviousScene = "MODES";
-        PreviousArray = GameObject.FindGameObjectsWithTag(PreviousScene);
+       
     }
 
     public void OpenLevelSelector(bool state)
@@ -96,8 +96,7 @@ public class UIButtons : MonoBehaviour
         {
             DLVL_2[i].SetActive(false);
         }
-        PreviousScene = "LVLS_1";
-        PreviousArray = GameObject.FindGameObjectsWithTag(PreviousScene);
+       
     }
 
     public void OpenDescriptionNivel1Selector(bool state)
@@ -106,10 +105,7 @@ public class UIButtons : MonoBehaviour
         {
             UIElements[i].SetActive(state);
         }
-        for (int i = 0; i < MODES.Length; i++)
-        {
-            MODES[i].SetActive(false);
-        }
+        
         for (int i = 0; i < DLVL_1.Length; i++)
         {
             DLVL_1[i].SetActive(!state);
@@ -118,13 +114,15 @@ public class UIButtons : MonoBehaviour
         {
             LVLS_1[i].SetActive(false);
         }
-        
+        for (int i = 0; i < MODES.Length; i++)
+        {
+            MODES[i].SetActive(false);
+        }
         for (int i = 0; i < DLVL_2.Length; i++)
         {
             DLVL_2[i].SetActive(false);
         }
-        PreviousScene = "DLVL_1";
-        PreviousArray = GameObject.FindGameObjectsWithTag(PreviousScene);
+        
     }
     public void OpenDescriptionNivel2Selector(bool state)
     {
@@ -149,19 +147,8 @@ public class UIButtons : MonoBehaviour
             DLVL_1[i].SetActive(false);
         }
 
-        PreviousScene = "DLVL_2";
-        PreviousArray = GameObject.FindGameObjectsWithTag(PreviousScene);
+       
     }
-    public void GoBack(bool state)
-    {
-        for (int i = 0; i < Total.Length; i++)
-        {
-            Total[i].SetActive(false);
-        }
-        for (int i = 0; i < PreviousArray.Length; i++)
-        {
-            PreviousArray[i].SetActive(true);
-        }
-    }
+ 
 }
 
