@@ -3315,7 +3315,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6412373124505381608}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bff9a1a42325714a8fd6f53d0fda0f4, type: 3}
   m_Name: 
@@ -3353,6 +3353,7 @@ GameObject:
   - component: {fileID: 6412373124505381605}
   - component: {fileID: 6412373124505381606}
   - component: {fileID: 6412373124505381607}
+  - component: {fileID: 6412373124505381609}
   m_Layer: 0
   m_Name: Player (PC)
   m_TagString: Player
@@ -3360,6 +3361,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6412373124505381609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6412373124505381608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bff9a1a42325714a8fd6f53d0fda0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheels:
+  - {fileID: 6412373123463148804}
+  - {fileID: 6412373124040085147}
+  - {fileID: 6412373122953333264}
+  - {fileID: 6412373123158890364}
+  FrontWheels:
+  - {fileID: 6412373124797409490}
+  - {fileID: 6412373123242266807}
+  steerPower: 450
+  motorPower0: -40
+  motorPower1: 100
+  motorPower2: 150
+  motorPower3: 200
+  motorPower4: 250
+  motorPower5: 500
+  rb: {fileID: 0}
+  CenterOfMass: {fileID: 6412373123261783778}
+  motorSpeed: 0
+  cambio: 1
+  cambiable: 0
+  frenable: 0
+  cambiazo: 0
 --- !u!4 &6412373124797409489
 Transform:
   m_ObjectHideFlags: 0

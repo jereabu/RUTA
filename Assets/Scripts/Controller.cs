@@ -9,11 +9,11 @@ public class Controller : MonoBehaviour
 
     public float steerPower = 100;
     public float motorPower0 = -40;
-    [SerializeField] float motorPower1 = 50;
-    [SerializeField] float motorPower2 = 70;
-    [SerializeField] float motorPower3 = 90;
-    [SerializeField] float motorPower4 = 110;
-    [SerializeField] float motorPower5 = 130;
+    [SerializeField] float motorPower1 = 100;
+    [SerializeField] float motorPower2 = 150;
+    [SerializeField] float motorPower3 = 200;
+    [SerializeField] float motorPower4 = 250;
+    [SerializeField] float motorPower5 = 500;
     public Rigidbody rb;
     public GameObject CenterOfMass;
     public float motorSpeed;
@@ -33,18 +33,19 @@ public class Controller : MonoBehaviour
         
     }
     private void Update() {
-
-        if(Input.GetKeyDown(KeyCode.Space))
+        //tpear arriba
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.transform.Translate(000,10,000);
+            rb.transform.Translate(000, 10, 000);
         }
-
+        //cambio +1
         if (!Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.E) && cambiable && cambio < 5)
         {
             Debug.Log("CAMBIAZOOO");
             cambio++;
             //cambiazo = true;
-        }
+        } 
+    //no se puede pegar cambiazo
         else if (cambio >= 5)
         {
             cambiazo = false;
@@ -84,11 +85,13 @@ public class Controller : MonoBehaviour
             Debug.Log("cambio " + cambio);
             
         }
+
         else if (Input.GetKey(KeyCode.W) == false && frenable && Input.GetKey(KeyCode.R))
         {
             cambio = 0; //Reversa
             Debug.Log("Reversa");
         }
+        //punto muerto
         else if (Input.GetKey(KeyCode.W) == false && frenable && Input.GetKey(KeyCode.F))
         {
             Debug.Log("Punto muerto");
@@ -148,11 +151,13 @@ public class Controller : MonoBehaviour
                 {
                     wheels[i].steerAngle = Input.GetAxis("Horizontal") * steerPower;
 
-                    //Debug.Log(Input.GetAxis("Horizontal"));
+                    Debug.Log(Input.GetAxis("Horizontal"));
 
-                    if (FrontWheels[i].transform.localRotation.y < 24 || FrontWheels[i].transform.position.y > -24)
+                    //deberia frenar la rotacion pero no funciona
+                    if (FrontWheels[i].transform.localRotation.y < 30 || FrontWheels[i].transform.localRotation.y > -30)
                     {
-                        FrontWheels[i].transform.localRotation = Quaternion.Euler(0, Input.GetAxis("Horizontal") * steerPower, 0);
+                        //Hace que rote
+                        FrontWheels[i].transform.localRotation.y = Quaternion.Euler(0, Input.GetAxis("Horizontal") * steerPower, 0);
                     }
 
                 }
