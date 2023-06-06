@@ -21,7 +21,7 @@ public class Controller : MonoBehaviour
     public bool cambiable;
     public bool frenable;
     public bool cambiazo;
-
+    public float Pedal;
 
     
 
@@ -33,6 +33,7 @@ public class Controller : MonoBehaviour
         
     }
     private void Update() {
+        Gas = Input.GetAxis("Gas") * 100;
         //tpear arriba
         if (Input.GetKeyDown(KeyCode.Space))
         {
