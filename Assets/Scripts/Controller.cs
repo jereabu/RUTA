@@ -55,6 +55,9 @@ public class Controller : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Guiños!
+        
+
         //para poner el auto en punto muerto mientras el auto esta andando, y poder hacer los cambios
         // frenable = freno de mano?
         if (cambio < 5)
@@ -137,12 +140,14 @@ public class Controller : MonoBehaviour
                     Debug.Log("Punto Muerto");
                     rb.constraints = RigidbodyConstraints.FreezePosition; 
                 }
+                //Debug.Log(wheel.motorTorque);
 
 
+                Debug.Log(Input.GetAxis("Vertical"));
 
-
-                //wheel.motorTorque = Input.GetAxis("Vertical") * motorPower;
                 motorSpeed = wheel.motorTorque;
+                
+                //motorSpeed = wheel.motorTorque;
                 
             }
 
@@ -152,7 +157,7 @@ public class Controller : MonoBehaviour
                 {
                     wheels[i].steerAngle = (Input.GetAxis("Horizontal") * steerPower) / 2;
 
-                    Debug.Log(Input.GetAxis("Horizontal"));
+                    //Debug.Log(Input.GetAxis("Horizontal"));
 
                     //deberia frenar la rotacion pero no funciona
                     if (FrontWheels[i].transform.localRotation.y < 30 || FrontWheels[i].transform.localRotation.y > -30)
