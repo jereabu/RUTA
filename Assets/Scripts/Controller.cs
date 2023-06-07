@@ -129,7 +129,8 @@ public class Controller : MonoBehaviour
                 {
                     wheel.motorTorque = Input.GetAxis("Vertical") * motorPower0;
                     Debug.Log("Reversa");
-                }
+                    rb.constraints = RigidbodyConstraints.None;
+            }
                 if (cambio == -1) //Punto Muerto o freno de mano
                 {
                     wheel.motorTorque = Input.GetAxis("Vertical") * 0;

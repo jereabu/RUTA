@@ -43,7 +43,7 @@ public class npcController : MonoBehaviour
             }
             else 
             {
-                Debug.Log("Set 0");
+                //Debug.Log("Set 0");
                 index = 0;
             }
                
