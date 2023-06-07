@@ -7,7 +7,7 @@ public class Controller : MonoBehaviour
     public WheelCollider[] wheels;
     public GameObject[] FrontWheels;
 
-    public float steerPower = 100;
+    [SerializeField] float steerPower;
     public float motorPower0 = -40;
     [SerializeField] float motorPower1 = 100;
     [SerializeField] float motorPower2 = 150;
@@ -56,6 +56,9 @@ public class Controller : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Guiños!
+        
+
         //para poner el auto en punto muerto mientras el auto esta andando, y poder hacer los cambios
         // frenable = freno de mano?
         if (cambio < 5)
@@ -130,19 +133,22 @@ public class Controller : MonoBehaviour
                 {
                     wheel.motorTorque = Input.GetAxis("Vertical") * motorPower0;
                     Debug.Log("Reversa");
-                }
+                    rb.constraints = RigidbodyConstraints.None;
+            }
                 if (cambio == -1) //Punto Muerto o freno de mano
                 {
                     wheel.motorTorque = Input.GetAxis("Vertical") * 0;
                     Debug.Log("Punto Muerto");
                     rb.constraints = RigidbodyConstraints.FreezePosition; 
                 }
+                //Debug.Log(wheel.motorTorque);
 
 
+                Debug.Log(Input.GetAxis("Vertical"));
 
-
-                //wheel.motorTorque = Input.GetAxis("Vertical") * motorPower;
                 motorSpeed = wheel.motorTorque;
+                
+                //motorSpeed = wheel.motorTorque;
                 
             }
 
@@ -150,15 +156,15 @@ public class Controller : MonoBehaviour
             {
                 if (i < 2)
                 {
-                    wheels[i].steerAngle = Input.GetAxis("Horizontal") * steerPower;
+                    wheels[i].steerAngle = (Input.GetAxis("Horizontal") * steerPower) / 2;
 
-                    Debug.Log(Input.GetAxis("Horizontal"));
+                    //Debug.Log(Input.GetAxis("Horizontal"));
 
                     //deberia frenar la rotacion pero no funciona
                     if (FrontWheels[i].transform.localRotation.y < 30 || FrontWheels[i].transform.localRotation.y > -30)
                     {
                         //Hace que rote
-                        FrontWheels[i].transform.localRotation.y = Quaternion.Euler(0, Input.GetAxis("Horizontal") * steerPower, 0);
+                        FrontWheels[i].transform.localRotation = Quaternion.Euler(0, (Input.GetAxis("Horizontal") * steerPower) / 2, 0);
                     }
 
                 }
