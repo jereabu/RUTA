@@ -7,7 +7,7 @@ public class Controller : MonoBehaviour
     public WheelCollider[] wheels;
     public GameObject[] FrontWheels;
 
-    public float steerPower = 100;
+    [SerializeField] float steerPower;
     public float motorPower0 = -40;
     [SerializeField] float motorPower1 = 100;
     [SerializeField] float motorPower2 = 150;
@@ -149,7 +149,7 @@ public class Controller : MonoBehaviour
             {
                 if (i < 2)
                 {
-                    wheels[i].steerAngle = Input.GetAxis("Horizontal") * steerPower;
+                    wheels[i].steerAngle = (Input.GetAxis("Horizontal") * steerPower) / 2;
 
                     Debug.Log(Input.GetAxis("Horizontal"));
 
@@ -157,7 +157,7 @@ public class Controller : MonoBehaviour
                     if (FrontWheels[i].transform.localRotation.y < 30 || FrontWheels[i].transform.localRotation.y > -30)
                     {
                         //Hace que rote
-                        FrontWheels[i].transform.localRotation.y = Quaternion.Euler(0, Input.GetAxis("Horizontal") * steerPower, 0);
+                        FrontWheels[i].transform.localRotation = Quaternion.Euler(0, (Input.GetAxis("Horizontal") * steerPower) / 2, 0);
                     }
 
                 }

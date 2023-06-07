@@ -3394,7 +3394,7 @@ MonoBehaviour:
   FrontWheels:
   - {fileID: 6412373124797409490}
   - {fileID: 6412373123242266807}
-  steerPower: 450
+  steerPower: 100
   motorPower0: -40
   motorPower1: 100
   motorPower2: 150
