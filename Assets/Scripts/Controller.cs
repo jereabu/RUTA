@@ -7,7 +7,7 @@ public class Controller : MonoBehaviour
     LogitechGSDK.LogiControllerPropertiesData properties;
     public WheelCollider[] wheels;
     public GameObject[] FrontWheels;
-
+    logitest logitest;
     [SerializeField] float steerPower;
     public float motorPower0 = -40;
     [SerializeField] float motorPower1 = 100;
@@ -22,10 +22,10 @@ public class Controller : MonoBehaviour
     public bool cambiable;
     public bool frenable;
     public bool cambiazo;
-    public float Pedal;
+    public float freno;
     public float embrague;
     public float acelerador;
-
+    public float InputX;
     
 
 
@@ -36,7 +36,38 @@ public class Controller : MonoBehaviour
         
     }
     private void Update() {
-        Gas = Input.GetAxis("Gas") * 100;
+        if (LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0))
+        {
+            LogitechGSDK.DIJOYSTATE2ENGINES rec;
+            rec = LogitechGSDK.LogiGetStateUnity(0);
+            InputX = rec.lX / 32768f; // 1 0 -1
+            if (rec.lY > 0)
+            {
+                acelerador = 0;
+            }
+            else if (rec.lY < 0)
+            {
+                acelerador = rec.lY / -32768f;
+            }
+
+            if (rec.lRz > 0)
+            {
+                freno = 0;
+            }
+            else if (rec.lRz < 0)
+            {
+                freno = rec.lRz / -32768f;
+            }
+            if (rec.rglSlider[0] > 0)
+            {
+                embrague = 0;
+            }
+            else if (rec.rglSlider[0] < 0)
+            {
+                embrague = rec.rglSlider[0] / -32768f;
+            }
+        }
+        //Gas = Input.GetAxis("Gas") * 100;
         //tpear arriba
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -59,42 +90,17 @@ public class Controller : MonoBehaviour
 
     void FixedUpdate()
     {
-       
-            LogitechGSDK.DIJOYSTATE2ENGINES rec;
-            rec = LogitechGSDK.LogiGetStateUnity(0);
-            xAxis = rec.lX / 32768f; // 1 0 -1
-            if(rec.lY > 0 )
-            {
-                acelerador = 0
-            }
-            else if(rec.lY < 0)
-            {
-                acelerador = rec.lY / -32768f;
-            }
-
-            if(rec.lRz > 0){
-                freno = 0;
-            }
-            else if(rec.lRz < 0){
-                freno = rec.lRz / -32768;
-            }
-            if(rec.rglSlider[0] > 0){
-                embrague = 0;
-            }
-            else if(rec.rglSlider[0] < 0){
-                embrague = rec.rglSlider[0] / -32768f;    
-            }
         
 
         //para poner el auto en punto muerto mientras el auto esta andando, y poder hacer los cambios
         // frenable = freno de mano?
-        if (cambio < 5 && embrague )
+        if (cambio < 5 && embrague > 0)
         {
             cambiable = true;
             frenable = true;
         }
         //para poner el auto en punto muerto mientras el auto NO esta andando
-        else if (cambio >= 5)
+        else if (cambio >= 5 || embrague <= 0)
         {
             cambiable = false;
             frenable = true;
@@ -133,46 +139,52 @@ public class Controller : MonoBehaviour
             {
                 if (cambio == 1)// Cambio 1
                 {
-                    wheel.motorTorque = Input.GetAxis("Vertical") * motorPower1;
+                    wheel.motorTorque = acelerador * motorPower1;
                     Debug.Log("Cambio 1");
                 }
                 if (cambio == 2)// Cambio 2
                 {
-                    wheel.motorTorque = Input.GetAxis("Vertical") * motorPower2;
+                    wheel.motorTorque = acelerador * motorPower2;
                     Debug.Log("Cambio 2");
                 }
                 if (cambio == 3)// Cambio 3
                 {
-                    wheel.motorTorque = Input.GetAxis("Vertical") * motorPower3;
+                    wheel.motorTorque = acelerador * motorPower3;
                     Debug.Log("Cambio 3");
                 }
                 if (cambio == 4) // Cambio 4
                 {
-                    wheel.motorTorque = Input.GetAxis("Vertical") * motorPower4;
+                    wheel.motorTorque = acelerador * motorPower4;
                     Debug.Log("Cambio 4");
                 }
                 if (cambio == 5) // Cambio 5
                 {
-                    wheel.motorTorque = Input.GetAxis("Vertical") * motorPower5;
+                    //acelerador += 1;
+                    if(acelerador > 0.5f || wheel.motorTorque == 0 && freno <= 0.4f)
+                    {
+                        wheel.motorTorque = acelerador * motorPower5;
+                    }
+                    
                     Debug.Log("Cambio 5");
+                    //acelerador -= 1;
                 }
                 if (cambio == 0) //Reversa
                 {
-                    wheel.motorTorque = Input.GetAxis("Vertical") * motorPower0;
+                    wheel.motorTorque = acelerador * motorPower0;
                     Debug.Log("Reversa");
                     rb.constraints = RigidbodyConstraints.None;
             }
                 if (cambio == -1) //Punto Muerto o freno de mano
                 {
-                    wheel.motorTorque = Input.GetAxis("Vertical") * 0;
+                    wheel.motorTorque = acelerador * 0;
                     Debug.Log("Punto Muerto");
                     rb.constraints = RigidbodyConstraints.FreezePosition; 
                 }
                 //Debug.Log(wheel.motorTorque);
-
-
-                Debug.Log(Input.GetAxis("Vertical"));
-
+                if(freno > 0.3f)
+                {
+                    wheel.motorTorque = wheel.motorTorque / 3;
+                }
                 motorSpeed = wheel.motorTorque;
                 
                 //motorSpeed = wheel.motorTorque;
@@ -183,7 +195,7 @@ public class Controller : MonoBehaviour
             {
                 if (i < 2)
                 {
-                    wheels[i].steerAngle = (Input.GetAxis("Horizontal") * steerPower) / 2;
+                    wheels[i].steerAngle = (InputX * steerPower) / 2;
 
                     //Debug.Log(Input.GetAxis("Horizontal"));
 
@@ -191,7 +203,7 @@ public class Controller : MonoBehaviour
                     if (FrontWheels[i].transform.localRotation.y < 30 || FrontWheels[i].transform.localRotation.y > -30)
                     {
                         //Hace que rote
-                        FrontWheels[i].transform.localRotation = Quaternion.Euler(0, (Input.GetAxis("Horizontal") * steerPower) / 2, 0);
+                        FrontWheels[i].transform.localRotation = Quaternion.Euler(0, (InputX * steerPower) / 2, 0);
                     }
 
                 }
