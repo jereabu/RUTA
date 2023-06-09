@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
+    LogitechGSDK.LogiControllerPropertiesData properties;
     public WheelCollider[] wheels;
     public GameObject[] FrontWheels;
 
@@ -22,6 +23,8 @@ public class Controller : MonoBehaviour
     public bool frenable;
     public bool cambiazo;
     public float Pedal;
+    public float embrague;
+    public float acelerador;
 
     
 
@@ -56,12 +59,36 @@ public class Controller : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Guiños!
+       
+            LogitechGSDK.DIJOYSTATE2ENGINES rec;
+            rec = LogitechGSDK.LogiGetStateUnity(0);
+            xAxis = rec.lX / 32768f; // 1 0 -1
+            if(rec.lY > 0 )
+            {
+                acelerador = 0
+            }
+            else if(rec.lY < 0)
+            {
+                acelerador = rec.lY / -32768f;
+            }
+
+            if(rec.lRz > 0){
+                freno = 0;
+            }
+            else if(rec.lRz < 0){
+                freno = rec.lRz / -32768;
+            }
+            if(rec.rglSlider[0] > 0){
+                embrague = 0;
+            }
+            else if(rec.rglSlider[0] < 0){
+                embrague = rec.rglSlider[0] / -32768f;    
+            }
         
 
         //para poner el auto en punto muerto mientras el auto esta andando, y poder hacer los cambios
         // frenable = freno de mano?
-        if (cambio < 5)
+        if (cambio < 5 && embrague )
         {
             cambiable = true;
             frenable = true;
