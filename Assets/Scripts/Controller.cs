@@ -67,7 +67,6 @@ public class Controller : MonoBehaviour
                 embrague = rec.rglSlider[0] / -32768f;
             }
         }
-        //Gas = Input.GetAxis("Gas") * 100;
         //tpear arriba
         if (Input.GetKeyDown(KeyCode.Space))
         {
