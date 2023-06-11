@@ -25,7 +25,7 @@ void Start()
 }
 void Update()
 {
-    RevsXMin = "Revoluciones Por Minuto: " + controller.motorSpeed;
+    //RevsXMin = "Revoluciones Por Minuto: " + controller.motorSpeed; 
 }
 
 }
