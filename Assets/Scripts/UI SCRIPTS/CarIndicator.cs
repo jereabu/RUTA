@@ -10,22 +10,23 @@ public class CarIndicator : MonoBehaviour
     public Text balizas;
     public Text guinoDer;
     public Text cambio;
-    public Text RevsXMin;
     public Text guinoIzq;
     public Text Vel;
-
 void Start()
 {
     balizas = GameObject.FindGameObjectWithTag("balizas").GetComponent<Text>(); 
     guinoDer = GameObject.FindGameObjectWithTag("guinoDer").GetComponent<Text>(); 
     guinoIzq = GameObject.FindGameObjectWithTag("guinoIzq").GetComponent<Text>(); 
-    RevsXMin = GameObject.FindGameObjectWithTag("Revs").GetComponent<Text>(); 
     Vel = GameObject.FindGameObjectWithTag("Vel").GetComponent<Text>(); 
     cambio = GameObject.FindGameObjectWithTag("cambio").GetComponent<Text>();
 }
 void Update()
 {
-    //RevsXMin = "Revoluciones Por Minuto: " + controller.motorSpeed; 
+    balizas.text = "Balizas: " + controller.Balizas;
+    guinoDer.text = "Guiño Derecho: " + controller.guinoDer;
+    guinoIzq.text = "Guiño Izquierdo: " + controller.guinoIzq;
+    Vel.text = "Velocidad: " + controller.motorSpeed;
+    cambio.text = "Cambio: " + controller.cambio;
 }
 
 }

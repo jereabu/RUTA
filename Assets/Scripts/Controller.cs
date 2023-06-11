@@ -26,7 +26,9 @@ public class Controller : MonoBehaviour
     public float embrague;
     public float acelerador;
     public float InputX;
-    
+    public bool guinoDer;
+    public bool guinoIzq;
+    public bool Balizas;
 
 
     private void Start()
@@ -71,6 +73,30 @@ public class Controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.transform.Translate(000, 10, 000);
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !guinoDer)
+        {
+            guinoDer = true;
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow) && guinoDer)
+        {
+            guinoDer = false;
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow) && !guinoIzq)
+        {
+            guinoDer = true;
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow) && guinoIzq)
+        {
+            guinoIzq = false;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && Balizas)
+        {
+             Balizas = false;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && !Balizas)
+        {
+             Balizas = true;
         }
         //cambio +1
         if (!Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.E) && cambiable && cambio < 5)

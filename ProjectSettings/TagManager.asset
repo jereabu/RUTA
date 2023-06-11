@@ -11,6 +11,12 @@ TagManager:
   - MenuUI
   - TrafficLVertical
   - TrafficLHorizontal
+  - Revs
+  - balizas
+  - guinoDer
+  - guinoIzq
+  - Vel
+  - cambio
   layers:
   - Default
   - TransparentFX
