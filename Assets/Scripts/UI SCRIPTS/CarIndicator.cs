@@ -28,7 +28,7 @@ void Update()
     balizas.text = "Balizas: " + controller.Balizas;
     guinoDer.text = "Guiño Derecho: " + controller.guinoDer;
     guinoIzq.text = "Guiño Izquierdo: " + controller.guinoIzq;
-    Vel.text = "Velocidad: " + controller.motorSpeed;
+    Vel.text = "Velocidad: " + Mathf.Floor(controller.motorSpeed / 2.5f);
     cambio.text = "Cambio: " + controller.cambio;
 }
 

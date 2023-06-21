@@ -200,7 +200,7 @@ public class LogitechSteeringWheel : MonoBehaviour
             }
 
             //Side Collision Force -> left or right arrow
-            if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+           /* if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
             {
                 LogitechGSDK.LogiPlaySideCollisionForce(0, 60);
             }
@@ -209,7 +209,7 @@ public class LogitechSteeringWheel : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.UpArrow))
             {
                 LogitechGSDK.LogiPlayFrontalCollisionForce(0, 60);
-            }
+            }*/
 
             //Dirt Road Effect-> I
             if (Input.GetKeyUp(KeyCode.I))

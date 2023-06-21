@@ -10,11 +10,11 @@ public class Controller : MonoBehaviour
     logitest logitest;
     [SerializeField] float steerPower;
     public float motorPower0 = -40;
-    [SerializeField] float motorPower1 = 100;
-    [SerializeField] float motorPower2 = 150;
-    [SerializeField] float motorPower3 = 200;
-    [SerializeField] float motorPower4 = 250;
-    [SerializeField] float motorPower5 = 500;
+    [SerializeField] float motorPower1 = 30;
+    [SerializeField] float motorPower2 = 75;
+    [SerializeField] float motorPower3 = 120;
+    [SerializeField] float motorPower4 = 160;
+    [SerializeField] float motorPower5 = 200;
     public Rigidbody rb;
     public GameObject CenterOfMass;
     public float motorSpeed;
@@ -35,9 +35,10 @@ public class Controller : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = CenterOfMass.transform.localPosition;
-        
+
     }
-    private void Update() {
+    private void Update()
+    {
         if (LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0))
         {
             LogitechGSDK.DIJOYSTATE2ENGINES rec;
@@ -74,29 +75,41 @@ public class Controller : MonoBehaviour
         {
             rb.transform.Translate(000, 10, 000);
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow) && !guinoDer)
+        if (Input.GetKeyUp(KeyCode.UpArrow) && !guinoIzq && !Balizas)
         {
-            guinoDer = true;
+            if (guinoDer == true)
+            {
+                guinoDer = false;
+            }
+            else
+            {
+                guinoDer = true;
+            }
+            Debug.Log("arriba");
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow) && guinoDer)
+        if (Input.GetKeyDown(KeyCode.DownArrow) && !guinoDer && !Balizas)
         {
-            guinoDer = false;
+            if (guinoIzq == true)
+            {
+                guinoIzq = false;
+            }
+            else
+            {
+                guinoIzq = true;
+            }
+            Debug.Log("abajo");
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow) && !guinoIzq)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && !guinoDer && !guinoIzq)
         {
-            guinoDer = true;
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow) && guinoIzq)
-        {
-            guinoIzq = false;
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && Balizas)
-        {
-             Balizas = false;
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && !Balizas)
-        {
-             Balizas = true;
+            if (Balizas == true)
+            {
+                Balizas = false;
+            }
+            else
+            {
+                Balizas = true;
+            }
+            Debug.Log("Balizas");
         }
         //cambio +1
         if (!Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.E) && cambiable && cambio < 5)
@@ -104,8 +117,8 @@ public class Controller : MonoBehaviour
             Debug.Log("CAMBIAZOOO");
             cambio++;
             //cambiazo = true;
-        } 
-    //no se puede pegar cambiazo
+        }
+        //no se puede pegar cambiazo
         else if (cambio >= 5)
         {
             cambiazo = false;
@@ -115,17 +128,17 @@ public class Controller : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+
 
         //para poner el auto en punto muerto mientras el auto esta andando, y poder hacer los cambios
         // frenable = freno de mano?
-        if (cambio < 5 && embrague > 0)
+        if (cambio < 5 && embrague > 0 && acelerador <= 0)
         {
             cambiable = true;
             frenable = true;
         }
         //para poner el auto en punto muerto mientras el auto NO esta andando
-        else if (cambio >= 5 || embrague <= 0)
+        else if (cambio >= 5 || embrague <= 0 || acelerador > 0)
         {
             cambiable = false;
             frenable = true;
@@ -134,7 +147,7 @@ public class Controller : MonoBehaviour
         //Arrancar el auto
         if (Input.GetKey(KeyCode.Q))
         {
-            rb.constraints = RigidbodyConstraints.None; 
+            rb.constraints = RigidbodyConstraints.None;
             cambio = 1;
             Debug.Log("Arrancado");
 
@@ -142,10 +155,10 @@ public class Controller : MonoBehaviour
         // Hacer que funcionen los cambios
         if (/*Input.GetKey(KeyCode.W) == false && Input.GetKeyDown(KeyCode.E) && cambiable */ cambiazo)
         {
-            cambio+=1;
+            cambio += 1;
             cambiazo = false;
             Debug.Log("cambio " + cambio);
-            
+
         }
 
         else if (Input.GetKey(KeyCode.W) == false && frenable && Input.GetKey(KeyCode.R))
@@ -159,9 +172,10 @@ public class Controller : MonoBehaviour
             Debug.Log("Punto muerto");
             cambio = -1;
         }
-        
-            foreach (var wheel in wheels)
-            {
+
+        //cambiofunc(cambio);
+        foreach (var wheel in wheels)
+        {
                 if (cambio == 1)// Cambio 1
                 {
                     wheel.motorTorque = acelerador * motorPower1;
@@ -198,41 +212,93 @@ public class Controller : MonoBehaviour
                     wheel.motorTorque = acelerador * motorPower0;
                     Debug.Log("Reversa");
                     rb.constraints = RigidbodyConstraints.None;
+
             }
                 if (cambio == -1) //Punto Muerto o freno de mano
                 {
                     wheel.motorTorque = acelerador * 0;
-                    Debug.Log("Punto Muerto");
-                    rb.constraints = RigidbodyConstraints.FreezePosition; 
+                acelerador = 0;
+                freno = 0;
+                    //Debug.Log("Punto Muerto");
+                    //rb.constraints = RigidbodyConstraints.FreezePosition; 
                 }
-                //Debug.Log(wheel.motorTorque);
-                if(freno > 0.3f)
-                {
-                    wheel.motorTorque = wheel.motorTorque / 3;
-                }
-                motorSpeed = wheel.motorTorque;
-                
-                //motorSpeed = wheel.motorTorque;
-                
-            }
-
-            for (int i = 0; i < wheels.Length; i++)
+            //Debug.Log(wheel.motorTorque);
+            if (freno > 0.3f)
             {
-                if (i < 2)
+                wheel.motorTorque = wheel.motorTorque / 3;
+            }
+            motorSpeed = wheel.motorTorque;
+
+            //motorSpeed = wheel.motorTorque;
+
+        }
+
+        for (int i = 0; i < wheels.Length; i++)
+        {
+            if (i < 2)
+            {
+                wheels[i].steerAngle = (InputX * steerPower) / 2;
+
+                //Debug.Log(Input.GetAxis("Horizontal"));
+
+
+                if (FrontWheels[i].transform.localRotation.y < 30 || FrontWheels[i].transform.localRotation.y > -30)
                 {
-                    wheels[i].steerAngle = (InputX * steerPower) / 2;
-
-                    //Debug.Log(Input.GetAxis("Horizontal"));
-
-                    //deberia frenar la rotacion pero no funciona
-                    if (FrontWheels[i].transform.localRotation.y < 30 || FrontWheels[i].transform.localRotation.y > -30)
-                    {
-                        //Hace que rote
-                        FrontWheels[i].transform.localRotation = Quaternion.Euler(0, (InputX * steerPower) / 2, 0);
-                    }
-
+                    //Hace que rote
+                    FrontWheels[i].transform.localRotation = Quaternion.Euler(0, (InputX * steerPower) / 2, 0);
                 }
+
             }
         }
     }
+    /*public Cambiofunc(int cambio)
+    {
+        foreach (var wheel in wheels)
+        {
+            if (cambio == 1)// Cambio 1
+            {
+                wheel.motorTorque = acelerador * motorPower1;
+                Debug.Log("Cambio 1");
+            }
+            if (cambio == 2)// Cambio 2
+            {
+                wheel.motorTorque = acelerador * motorPower2;
+                Debug.Log("Cambio 2");
+            }
+            if (cambio == 3)// Cambio 3
+            {
+                wheel.motorTorque = acelerador * motorPower3;
+                Debug.Log("Cambio 3");
+            }
+            if (cambio == 4) // Cambio 4
+            {
+                wheel.motorTorque = acelerador * motorPower4;
+                Debug.Log("Cambio 4");
+            }
+            if (cambio == 5) // Cambio 5
+            {
+                //acelerador += 1;
+                if (acelerador > 0.5f || wheel.motorTorque == 0 && freno <= 0.4f)
+                {
+                    wheel.motorTorque = acelerador * motorPower5;
+                }
 
+                Debug.Log("Cambio 5");
+                //acelerador -= 1;
+            }
+            if (cambio == 0) //Reversa
+            {
+                wheel.motorTorque = acelerador * motorPower0;
+                Debug.Log("Reversa");
+                rb.constraints = RigidbodyConstraints.None;
+            }
+            if (cambio == -1) //Punto Muerto o freno de mano
+            {
+                wheel.motorTorque = acelerador * 0;
+                //Debug.Log("Punto Muerto");
+                rb.constraints = RigidbodyConstraints.FreezePosition;
+            }
+             return;
+        }
+    }*/
+}
