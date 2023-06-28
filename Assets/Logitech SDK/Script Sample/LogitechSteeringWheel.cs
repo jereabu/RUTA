@@ -194,7 +194,7 @@ public class LogitechSteeringWheel : MonoBehaviour
                 }
                 else
                 {
-                    LogitechGSDK.LogiPlayDamperForce(0, 50);
+                    LogitechGSDK.LogiPlayDamperForce(0, 25);
                     activeForceAndEffect[2] = "Damper Force\n ";
                 }
             }

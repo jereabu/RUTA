@@ -33,6 +33,8 @@ public class Controller : MonoBehaviour
 
     private void Start()
     {
+
+        // PARA LA DUREZA DEL CONTROL ES EL MODIFICADOR DE VOLANTE DAMPER FORCE!!!!!!! IMPORTANTE
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = CenterOfMass.transform.localPosition;
 
@@ -145,7 +147,7 @@ public class Controller : MonoBehaviour
         }
 
         //Arrancar el auto
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Q) && cambiable)
         {
             rb.constraints = RigidbodyConstraints.None;
             cambio = 1;
