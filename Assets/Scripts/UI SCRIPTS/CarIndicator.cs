@@ -7,7 +7,7 @@ using TMPro;
 
 public class CarIndicator : MonoBehaviour
 {
-    Controller controller;
+    flechitas flechitas;
     public TMP_Text balizas;
     public TMP_Text guinoDer;
     public TMP_Text cambio;
@@ -15,7 +15,7 @@ public class CarIndicator : MonoBehaviour
     public TMP_Text Vel;
 void Start()
 {
-    controller = FindObjectOfType<Controller>();
+    flechitas = FindObjectOfType<flechitas>();
         
     balizas = GameObject.FindGameObjectWithTag("balizas").GetComponent<TMP_Text>(); 
     guinoDer = GameObject.FindGameObjectWithTag("guinoDer").GetComponent<TMP_Text>(); 
@@ -25,11 +25,11 @@ void Start()
 }
 void Update()
 {
-    balizas.text = "Balizas: " + controller.Balizas;
-    guinoDer.text = "Guiño Derecho: " + controller.guinoDer;
-    guinoIzq.text = "Guiño Izquierdo: " + controller.guinoIzq;
-    Vel.text = "Velocidad: " + Mathf.Floor(controller.motorSpeed / 2.5f);
-    cambio.text = "Cambio: " + controller.cambio;
+    //balizas.text = "Balizas: " + flechitas.Balizas;
+    //guinoDer.text = "Guiño Derecho: " + flechitas.guinoDer;
+    //guinoIzq.text = "Guiño Izquierdo: " + flechitas.guinoIzq;
+    Vel.text = "Velocidad: " + Mathf.Floor(flechitas.motorSpeed / 2.5f);
+    cambio.text = "Cambio: " + flechitas.cambio;
 }
 
 }
