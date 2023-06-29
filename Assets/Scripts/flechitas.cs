@@ -19,6 +19,10 @@ public class flechitas : MonoBehaviour
     public bool cambiable;
     public bool frenable;
     public bool cambiazo;
+    public bool guinoDer;
+    public bool guinoIzq;
+    public bool Balizas;
+
 
 
 
@@ -37,7 +41,42 @@ public class flechitas : MonoBehaviour
         {
             rb.transform.Translate(000, 10, 000);
         }
-
+if (Input.GetKeyUp(KeyCode.UpArrow) && !guinoIzq && !Balizas)
+        {
+            if (guinoDer == true)
+            {
+                guinoDer = false;
+            }
+            else
+            {
+                guinoDer = true;
+            }
+            Debug.Log("arriba");
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow) && !guinoDer && !Balizas)
+        {
+            if (guinoIzq == true)
+            {
+                guinoIzq = false;
+            }
+            else
+            {
+                guinoIzq = true;
+            }
+            Debug.Log("abajo");
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && !guinoDer && !guinoIzq)
+        {
+            if (Balizas == true)
+            {
+                Balizas = false;
+            }
+            else
+            {
+                Balizas = true;
+            }
+            Debug.Log("Balizas");
+        }
         if (!Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.E) && cambiable && cambio < 5)
         {
             Debug.Log("CAMBIAZOOO");
