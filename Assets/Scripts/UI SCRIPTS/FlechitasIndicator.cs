@@ -7,7 +7,7 @@ using TMPro;
 
 public class FlechitasIndicator : MonoBehaviour
 {
-    flechitas Flechitas;
+    flechitas flechitas;
     public TMP_Text balizas;
     public TMP_Text guinoDer;
     public TMP_Text cambio;
@@ -15,7 +15,8 @@ public class FlechitasIndicator : MonoBehaviour
     public TMP_Text Vel;
 void Start()
 {
-    Flechitas = FindObjectOfType<flechitas>();
+    
+    flechitas = FindObjectOfType<flechitas>();
         
     balizas = GameObject.FindGameObjectWithTag("balizas").GetComponent<TMP_Text>(); 
     guinoDer = GameObject.FindGameObjectWithTag("guinoDer").GetComponent<TMP_Text>(); 
@@ -25,11 +26,11 @@ void Start()
 }
 void Update()
 {
-    balizas.text = "Balizas: " + Flechitas.Balizas;
-    guinoDer.text = "Guiño Derecho: " + Flechitas.guinoDer;
-    guinoIzq.text = "Guiño Izquierdo: " + Flechitas.guinoIzq;
-    Vel.text = "Velocidad: " + Mathf.Floor(Flechitas.motorSpeed / 2.5f);
-    cambio.text = "Cambio: " + Flechitas.cambio;
+    balizas.text = "Balizas: " + flechitas.Balizas;
+    guinoDer.text = "Guiño Derecho: " + flechitas.guinoDer;
+    guinoIzq.text = "Guiño Izquierdo: " + flechitas.guinoIzq;
+    Vel.text = "Velocidad: " + Mathf.Floor(flechitas.motorSpeed / 2.5f);
+    cambio.text = "Cambio: " + flechitas.cambio;
 }
 
 }
