@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &858987309081790606
+--- !u!1 &4559151522850570611
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1129904461899252469}
+  - component: {fileID: 4596018234138481540}
   m_Layer: 0
   m_Name: Esquina2C1E
   m_TagString: Untagged
@@ -16,28 +16,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1129904461899252469
+--- !u!4 &4596018234138481540
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858987309081790606}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_GameObject: {fileID: 4559151522850570611}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4621508483719891721}
+  - {fileID: 499881647116122977}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!1001 &5163478160400542946
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &100581987314211978
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1129904461899252469}
+    m_TransformParent: {fileID: 4596018234138481540}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 94f41b88a13d07048bcd010547161421, type: 3}
       propertyPath: m_RootOrder
@@ -61,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94f41b88a13d07048bcd010547161421, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94f41b88a13d07048bcd010547161421, type: 3}
       propertyPath: m_LocalRotation.y
@@ -85,31 +85,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 94f41b88a13d07048bcd010547161421, type: 3}
       propertyPath: m_Name
-      value: 'esquina 2 carril 1 estacionamiento '
+      value: esquina 2 carril 1 estacionamiento
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94f41b88a13d07048bcd010547161421, type: 3}
---- !u!4 &4621508483719891721 stripped
+--- !u!4 &499881647116122977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 94f41b88a13d07048bcd010547161421, type: 3}
-  m_PrefabInstance: {fileID: 5163478160400542946}
+  m_PrefabInstance: {fileID: 100581987314211978}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5433933620519915955 stripped
+--- !u!1 &982979996297961947 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 94f41b88a13d07048bcd010547161421, type: 3}
-  m_PrefabInstance: {fileID: 5163478160400542946}
+  m_PrefabInstance: {fileID: 100581987314211978}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &4185403177018402562
+--- !u!64 &508718970983779567
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5433933620519915955}
+  m_GameObject: {fileID: 982979996297961947}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -2563037855689736988, guid: 94f41b88a13d07048bcd010547161421, type: 3}
+  m_Mesh: {fileID: 7752089794140389294, guid: 94f41b88a13d07048bcd010547161421, type: 3}
