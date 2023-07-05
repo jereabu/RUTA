@@ -52,7 +52,7 @@ public class npcController : MonoBehaviour
         
         agent.SetDestination(WalkingPoints[index].position); 
 
-        animator.SetFloat("Vertical" , !agent.isStopped ? 1 :0);
+        animator.SetFloat("Vertical" , !agent.isStopped ? 1 : 0);
     }
 
     void OnCollisionEnter(Collision col)
