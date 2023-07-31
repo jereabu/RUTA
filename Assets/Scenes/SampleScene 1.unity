@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3a7b607c41e592d4aabfc6449b406ca2, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a7b607c41e592d4aabfc6449b406ca2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -234,6 +234,10 @@ PrefabInstance:
     - target: {fileID: 4724532677063919993, guid: 00f1276028992944ab96d5d180445b7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972134599564981557, guid: 00f1276028992944ab96d5d180445b7f, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00f1276028992944ab96d5d180445b7f, type: 3}
@@ -389,6 +393,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4972134599564981557, guid: 00f1276028992944ab96d5d180445b7f, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00f1276028992944ab96d5d180445b7f, type: 3}
 --- !u!1 &492002487
@@ -539,6 +547,10 @@ PrefabInstance:
     - target: {fileID: 4724532677063919993, guid: 00f1276028992944ab96d5d180445b7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972134599564981557, guid: 00f1276028992944ab96d5d180445b7f, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00f1276028992944ab96d5d180445b7f, type: 3}
@@ -827,6 +839,10 @@ PrefabInstance:
     - target: {fileID: 4724532677063919993, guid: 00f1276028992944ab96d5d180445b7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972134599564981557, guid: 00f1276028992944ab96d5d180445b7f, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00f1276028992944ab96d5d180445b7f, type: 3}
@@ -2784,7 +2800,7 @@ WheelCollider:
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+    m_Stiffness: 4
   m_Enabled: 1
 --- !u!4 &6412373122953333265
 Transform:
@@ -2963,7 +2979,7 @@ WheelCollider:
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+    m_Stiffness: 4
   m_Enabled: 1
 --- !u!4 &6412373123158890365
 Transform:
@@ -3433,7 +3449,7 @@ Transform:
   - {fileID: 6412373123261783777}
   - {fileID: 6412373123215324597}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &6412373124505381606
 Rigidbody:

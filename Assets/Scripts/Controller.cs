@@ -180,23 +180,35 @@ public class Controller : MonoBehaviour
         {
                 if (cambio == 1)// Cambio 1
                 {
+                if (acelerador > 0.5f || wheel.motorTorque == 0 && freno <= 0.4f)
+                {
                     wheel.motorTorque = acelerador * motorPower1;
-                    Debug.Log("Cambio 1");
+                }
+                Debug.Log("Cambio 1");
                 }
                 if (cambio == 2)// Cambio 2
                 {
+                if (acelerador > 0.5f || wheel.motorTorque == 0 && freno <= 0.4f)
+                {
                     wheel.motorTorque = acelerador * motorPower2;
-                    Debug.Log("Cambio 2");
+                }
+                Debug.Log("Cambio 2");
                 }
                 if (cambio == 3)// Cambio 3
                 {
+                if (acelerador > 0.5f || wheel.motorTorque == 0 && freno <= 0.4f)
+                {
                     wheel.motorTorque = acelerador * motorPower3;
-                    Debug.Log("Cambio 3");
+                }
+                Debug.Log("Cambio 3");
                 }
                 if (cambio == 4) // Cambio 4
                 {
-                    wheel.motorTorque = acelerador * motorPower4;
-                    Debug.Log("Cambio 4");
+                    if (acelerador > 0.5f || wheel.motorTorque == 0 && freno <= 0.4f)
+                        {
+                            wheel.motorTorque = acelerador * motorPower4;
+                        }
+                Debug.Log("Cambio 4");
                 }
                 if (cambio == 5) // Cambio 5
                 {
@@ -228,6 +240,7 @@ public class Controller : MonoBehaviour
             if (freno > 0.3f)
             {
                 wheel.motorTorque = wheel.motorTorque / 3;
+                 
             }
             motorSpeed = wheel.motorTorque;
 
