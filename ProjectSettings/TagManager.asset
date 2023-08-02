@@ -17,6 +17,9 @@ TagManager:
   - guinoIzq
   - Vel
   - cambio
+  - guinoDerFoto
+  - guinoIzqFoto
+  - balizasFoto
   layers:
   - Default
   - TransparentFX

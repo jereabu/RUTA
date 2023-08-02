@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
@@ -27,8 +28,13 @@ public class Controller : MonoBehaviour
     public float acelerador;
     public float InputX;
     public bool guinoDer;
+    public Image guinoDerFoto;
     public bool guinoIzq;
+    public Image guinoIzqFoto;
     public bool Balizas;
+    public Image BalizasFoto;
+    public Color colorInicio = Color.grey;
+    public Color colorFinal = Color.white;
 
 
     private void Start()
@@ -36,7 +42,13 @@ public class Controller : MonoBehaviour
 
         // PARA LA DUREZA DEL CONTROL ES EL MODIFICADOR DE VOLANTE DAMPER FORCE!!!!!!! IMPORTANTE
         rb = GetComponent<Rigidbody>();
+        Image BalizasImage = BalizasFoto.GetComponent<Image>();
+        Image guinoDerImage = guinoDerFoto.GetComponent<Image>();
+        Image guinoIzqImage = guinoIzqFoto.GetComponent<Image>();
         rb.centerOfMass = CenterOfMass.transform.localPosition;
+        guinoDerImage.color = Color.grey;
+        guinoIzqImage.color = Color.grey;
+        BalizasImage.color = Color.grey;
 
     }
     private void Update()
@@ -82,6 +94,7 @@ public class Controller : MonoBehaviour
             if (guinoDer == true)
             {
                 guinoDer = false;
+                //guinoDerFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 2, 2));
             }
             else
             {
@@ -125,8 +138,32 @@ public class Controller : MonoBehaviour
         {
             cambiazo = false;
         }
+        if (guinoDer == true)
+        {
+            guinoDerFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 5));
+        }
+        if (guinoDer == false)
+        {
+            guinoDerFoto.color = colorInicio;
+        }
+        if (guinoIzq == true)
+        {
+            guinoIzqFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 1));
+        }
+        if (guinoIzq == false)
+        {
+            guinoIzqFoto.color = colorInicio;
+        }
+        if (Balizas == true)
+        {
+            BalizasFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 1));
+        }
+        if (Balizas == false)
+        {
+            BalizasFoto.color = colorInicio;
+        }
     }
-
+        
 
     void FixedUpdate()
     {
@@ -240,7 +277,11 @@ public class Controller : MonoBehaviour
             if (freno > 0.3f)
             {
                 wheel.motorTorque = wheel.motorTorque / 3;
-                 
+                wheel.brakeTorque = freno * 100;
+            }
+            else
+            {
+                wheel.brakeTorque = 0;
             }
             motorSpeed = wheel.motorTorque;
 

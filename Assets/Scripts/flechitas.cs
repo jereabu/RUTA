@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 public class flechitas : MonoBehaviour
 {
     public WheelCollider[] wheels;
@@ -20,8 +21,13 @@ public class flechitas : MonoBehaviour
     public bool frenable;
     public bool cambiazo;
     public bool guinoDer;
+    
     public bool guinoIzq;
+
     public bool Balizas;
+    
+    
+    
 
 
 
@@ -31,7 +37,7 @@ public class flechitas : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.centerOfMass = CenterOfMass.transform.localPosition;
+          rb.centerOfMass = CenterOfMass.transform.localPosition;
 
     }
     private void Update()
@@ -46,6 +52,7 @@ if (Input.GetKeyUp(KeyCode.UpArrow) && !guinoIzq && !Balizas)
             if (guinoDer == true)
             {
                 guinoDer = false;
+      
             }
             else
             {
