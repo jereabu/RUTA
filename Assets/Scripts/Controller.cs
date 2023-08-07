@@ -17,6 +17,9 @@ public class Controller : MonoBehaviour
     [SerializeField] float motorPower4 = 160;
     [SerializeField] float motorPower5 = 200;
     public Rigidbody rb;
+    public AudioSource Audio;
+    public AudioSource Audio1;
+    public AudioSource Audio2;
     public GameObject CenterOfMass;
     public float motorSpeed;
     public int cambio = 1;
@@ -35,6 +38,10 @@ public class Controller : MonoBehaviour
     public Image BalizasFoto;
     public Color colorInicio = Color.grey;
     public Color colorFinal = Color.white;
+    public AudioClip BalizasSFX;
+    public bool Audio0;
+    public bool Audio3;
+    public bool Audio4;
 
 
     private void Start()
@@ -42,6 +49,7 @@ public class Controller : MonoBehaviour
 
         // PARA LA DUREZA DEL CONTROL ES EL MODIFICADOR DE VOLANTE DAMPER FORCE!!!!!!! IMPORTANTE
         rb = GetComponent<Rigidbody>();
+        Audio = GetComponent<AudioSource>();
         Image BalizasImage = BalizasFoto.GetComponent<Image>();
         Image guinoDerImage = guinoDerFoto.GetComponent<Image>();
         Image guinoIzqImage = guinoIzqFoto.GetComponent<Image>();
@@ -49,10 +57,11 @@ public class Controller : MonoBehaviour
         guinoDerImage.color = Color.grey;
         guinoIzqImage.color = Color.grey;
         BalizasImage.color = Color.grey;
-
+        
     }
     private void Update()
     {
+        
         if (LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0))
         {
             LogitechGSDK.DIJOYSTATE2ENGINES rec;
@@ -106,6 +115,7 @@ public class Controller : MonoBehaviour
         {
             if (guinoIzq == true)
             {
+                
                 guinoIzq = false;
             }
             else
@@ -140,26 +150,32 @@ public class Controller : MonoBehaviour
         }
         if (guinoDer == true)
         {
-            guinoDerFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 5));
+            Audio.Play(0);
+            guinoDerFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 0.5f));
         }
         if (guinoDer == false)
         {
+            Audio.Stop();
             guinoDerFoto.color = colorInicio;
         }
         if (guinoIzq == true)
         {
-            guinoIzqFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 1));
+            Audio.Play(0);
+            guinoIzqFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 0.5f));
         }
         if (guinoIzq == false)
         {
+            Audio.Stop();
             guinoIzqFoto.color = colorInicio;
         }
         if (Balizas == true)
         {
-            BalizasFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 1));
+            Audio.Play(0);
+            BalizasFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 0.5f));
         }
         if (Balizas == false)
         {
+            Audio.Stop();
             BalizasFoto.color = colorInicio;
         }
     }

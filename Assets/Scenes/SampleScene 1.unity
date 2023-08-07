@@ -3745,6 +3745,9 @@ MonoBehaviour:
   motorPower4: 250
   motorPower5: 300
   rb: {fileID: 0}
+  Audio: {fileID: 0}
+  Audio1: {fileID: 0}
+  Audio2: {fileID: 0}
   CenterOfMass: {fileID: 6412373123261783778}
   motorSpeed: 0
   cambio: -1
@@ -3763,44 +3766,106 @@ MonoBehaviour:
   BalizasFoto: {fileID: 1148790695}
   colorInicio: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   colorFinal: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &6412373124505381610
-MonoBehaviour:
+  BalizasSFX: {fileID: 8300000, guid: 8043ba034d5dc5e4abdbe55c4e307b28, type: 3}
+  Audio0: 0
+  Audio3: 0
+  Audio4: 0
+--- !u!82 &6412373124505381610
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6412373124505381608}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74df1d234c7663e4489b5ae6859059b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wheels:
-  - {fileID: 6412373123463148804}
-  - {fileID: 6412373124040085147}
-  - {fileID: 6412373122953333264}
-  - {fileID: 6412373123158890364}
-  FrontWheels:
-  - {fileID: 6412373124797409490}
-  - {fileID: 6412373123242266807}
-  steerPower: 0
-  motorPower0: -40
-  motorPower1: 100
-  motorPower2: 150
-  motorPower3: 200
-  motorPower4: 250
-  motorPower5: 500
-  rb: {fileID: 0}
-  CenterOfMass: {fileID: 6412373123261783778}
-  motorSpeed: 0
-  cambio: 1
-  cambiable: 0
-  frenable: 0
-  cambiazo: 0
-  freno: 0
-  embrague: 0
-  acelerador: 0
-  InputX: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8043ba034d5dc5e4abdbe55c4e307b28, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &6412373124797409489
 Transform:
   m_ObjectHideFlags: 0

@@ -187,10 +187,10 @@ public class LogitechSteeringWheel : MonoBehaviour
             //Damper Force -> D
             if (Input.GetKeyUp(KeyCode.D))
             {
-                if (LogitechGSDK.LogiIsPlaying(0, LogitechGSDK.LOGI_FORCE_DAMPER))
+                if (LogitechGSDK.LogiIsPlaying(1, LogitechGSDK.LOGI_FORCE_DAMPER))
                 {
                     LogitechGSDK.LogiStopDamperForce(0);
-                    activeForceAndEffect[2] = "";
+                    activeForceAndEffect[2] = "Damper Force\n ";
                 }
                 else
                 {
