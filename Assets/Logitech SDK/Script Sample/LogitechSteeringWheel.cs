@@ -36,6 +36,8 @@ public class LogitechSteeringWheel : MonoBehaviour
         forcesLabel += "Play Leds : P\n";
         activeForceAndEffect = new string[9];
         Debug.Log("SteeringInit:" + LogitechGSDK.LogiSteeringInitialize(false));
+        LogitechGSDK.LogiPlayDamperForce(0, 25);
+        LogitechGSDK.LogiIsPlaying(1, LogitechGSDK.LOGI_FORCE_DAMPER);
     }
 
     void OnApplicationQuit()

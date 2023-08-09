@@ -19,7 +19,6 @@ public class Controller : MonoBehaviour
     public Rigidbody rb;
     public AudioSource Audio;
     public AudioSource Audio1;
-    public AudioSource Audio2;
     public GameObject CenterOfMass;
     public float motorSpeed;
     public int cambio = 1;
@@ -39,9 +38,8 @@ public class Controller : MonoBehaviour
     public Color colorInicio = Color.grey;
     public Color colorFinal = Color.white;
     public AudioClip BalizasSFX;
-    public bool Audio0;
-    public bool Audio3;
-    public bool Audio4;
+    public AudioClip AudioAuto;
+
 
 
     private void Start()
@@ -49,7 +47,7 @@ public class Controller : MonoBehaviour
 
         // PARA LA DUREZA DEL CONTROL ES EL MODIFICADOR DE VOLANTE DAMPER FORCE!!!!!!! IMPORTANTE
         rb = GetComponent<Rigidbody>();
-        Audio = GetComponent<AudioSource>();
+        //Audio = GetComponent<AudioSource>();
         Image BalizasImage = BalizasFoto.GetComponent<Image>();
         Image guinoDerImage = guinoDerFoto.GetComponent<Image>();
         Image guinoIzqImage = guinoIzqFoto.GetComponent<Image>();
@@ -102,8 +100,9 @@ public class Controller : MonoBehaviour
         {
             if (guinoDer == true)
             {
+                Audio.Stop();
                 guinoDer = false;
-                //guinoDerFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 2, 2));
+               
             }
             else
             {
@@ -115,7 +114,7 @@ public class Controller : MonoBehaviour
         {
             if (guinoIzq == true)
             {
-                
+                Audio.Stop();
                 guinoIzq = false;
             }
             else
@@ -128,6 +127,7 @@ public class Controller : MonoBehaviour
         {
             if (Balizas == true)
             {
+                Audio.Stop();
                 Balizas = false;
             }
             else
@@ -150,32 +150,33 @@ public class Controller : MonoBehaviour
         }
         if (guinoDer == true)
         {
-            Audio.Play(0);
+            Audio.PlayOneShot(BalizasSFX);
             guinoDerFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 0.5f));
         }
         if (guinoDer == false)
         {
-            Audio.Stop();
+            
             guinoDerFoto.color = colorInicio;
         }
         if (guinoIzq == true)
         {
-            Audio.Play(0);
+            Audio.PlayOneShot(BalizasSFX);
             guinoIzqFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 0.5f));
         }
         if (guinoIzq == false)
         {
-            Audio.Stop();
+            
             guinoIzqFoto.color = colorInicio;
         }
         if (Balizas == true)
         {
-            Audio.Play(0);
+            
+            Audio.PlayOneShot(BalizasSFX);
             BalizasFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 0.5f));
         }
         if (Balizas == false)
         {
-            Audio.Stop();
+            
             BalizasFoto.color = colorInicio;
         }
     }
@@ -184,7 +185,10 @@ public class Controller : MonoBehaviour
     void FixedUpdate()
     {
 
-
+        if (acelerador > 0 && cambio >= 0)
+        {
+            Audio.PlayOneShot(AudioAuto);
+        }
         //para poner el auto en punto muerto mientras el auto esta andando, y poder hacer los cambios
         // frenable = freno de mano?
         if (cambio < 5 && embrague > 0 && acelerador <= 0)
