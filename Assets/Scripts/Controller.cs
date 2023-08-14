@@ -65,13 +65,13 @@ public class Controller : MonoBehaviour
             LogitechGSDK.DIJOYSTATE2ENGINES rec;
             rec = LogitechGSDK.LogiGetStateUnity(0);
             InputX = rec.lX / 32768f; // 1 0 -1
-            if (rec.lY > 0)
+            if ( rec.lZ  > 0)
             {
                 acelerador = 0;
             }
-            else if (rec.lY < 0)
+            else if (rec.lZ < 0)
             {
-                acelerador = rec.lY / -32768f;
+                acelerador = rec.lZ / -32768f;
             }
 
             if (rec.lRz > 0)
@@ -82,13 +82,13 @@ public class Controller : MonoBehaviour
             {
                 freno = rec.lRz / -32768f;
             }
-            if (rec.rglSlider[0] > 0)
+            if (rec.lY > 0)
             {
                 embrague = 0;
             }
-            else if (rec.rglSlider[0] < 0)
+            else if (rec.lY < 0)
             {
-                embrague = rec.rglSlider[0] / -32768f;
+                embrague = rec.lY / -32768f;
             }
         }
         //tpear arriba
