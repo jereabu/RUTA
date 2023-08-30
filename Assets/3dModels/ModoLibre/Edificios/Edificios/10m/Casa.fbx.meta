@@ -1,59 +1,9 @@
 fileFormatVersion: 2
-guid: 5a8e44f707cc00640ba94758793f4e74
+guid: f95cf39178494b8479dc8ce70d342d92
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Madera
-    second: {fileID: 2100000, guid: aa54cae710a5bde45bf7c5c811def070, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Paleta_
-    second: {fileID: 2100000, guid: f7034bc8864fc9549be7366928e8bf56, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: techo
-    second: {fileID: 2100000, guid: 64e00db8e1c67b047afdab8b811e496e, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Paleta general
-    second: {fileID: 2800000, guid: eb63ebe4e2e2e4b46aa7a4abc9663c6a, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: roof_09_diff_1k
-    second: {fileID: 2800000, guid: 69af57d08a02bd144a8f00cb77b00db1, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: roof_09_nor_gl_1k
-    second: {fileID: 2800000, guid: 01aea5ff7a32b0c4581493828d9030f7, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: roof_09_rough_1k
-    second: {fileID: 2800000, guid: 15c3e7599772cf7478045d66c97635fd, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: wood_floor_deck_diff_1k
-    second: {fileID: 2800000, guid: 531608b644531354da6100a3f0b33b04, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: wood_floor_deck_nor_gl_1k
-    second: {fileID: 2800000, guid: 156229cd2c5d5ad40bfb5037e4b13002, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: wood_floor_deck_rough_1k
-    second: {fileID: 2800000, guid: 1ef1ab2dacc4aae44a41e5973eee5ddb, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
