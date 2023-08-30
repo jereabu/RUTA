@@ -18,16 +18,15 @@ public class Controller : MonoBehaviour
     [SerializeField] float motorPower5 = 200;
     public Rigidbody rb;
     public AudioSource Audio;
-    public AudioSource Audio1;
     public GameObject CenterOfMass;
     public float motorSpeed;
-    public int cambio = 1;
+    static public int cambio = 1;
     public bool cambiable;
     public bool frenable;
     public bool cambiazo;
     public float freno;
     public float embrague;
-    public float acelerador;
+    static public float acelerador;
     public float InputX;
     public bool guinoDer;
     public Image guinoDerFoto;
@@ -38,7 +37,6 @@ public class Controller : MonoBehaviour
     public Color colorInicio = Color.grey;
     public Color colorFinal = Color.white;
     public AudioClip BalizasSFX;
-    public AudioClip AudioAuto;
 
 
 
@@ -55,7 +53,8 @@ public class Controller : MonoBehaviour
         guinoDerImage.color = Color.grey;
         guinoIzqImage.color = Color.grey;
         BalizasImage.color = Color.grey;
-        
+
+
     }
     private void Update()
     {
@@ -187,7 +186,7 @@ public class Controller : MonoBehaviour
 
         if (acelerador > 0 && cambio >= 0)
         {
-            Audio.PlayOneShot(AudioAuto);
+     
         }
         //para poner el auto en punto muerto mientras el auto esta andando, y poder hacer los cambios
         // frenable = freno de mano?
