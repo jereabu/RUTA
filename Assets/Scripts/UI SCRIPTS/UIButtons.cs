@@ -136,7 +136,7 @@ public class UIButtons : MonoBehaviour
         }
         for (int i = 0; i < LVLS_1.Length; i++)
         {
-            LVLS_1[i].SetActive(false);
+            LVLS_1[i].SetActive(!state);
         }
         for (int i = 0; i < MODES.Length; i++)
         {
