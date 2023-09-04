@@ -37,7 +37,8 @@ public class Controller : MonoBehaviour
     public Color colorInicio = Color.grey;
     public Color colorFinal = Color.white;
     public AudioClip BalizasSFX;
-
+    public GameObject Volante;
+    public Quaternion _initialOrientation;
 
 
     private void Start()
@@ -53,12 +54,21 @@ public class Controller : MonoBehaviour
         guinoDerImage.color = Color.grey;
         guinoIzqImage.color = Color.grey;
         BalizasImage.color = Color.grey;
+        _initialOrientation = transform.localRotation;
 
 
     }
     private void Update()
     {
-        
+        // Rotar el volante, no el auto
+        if (InputX >= 0.03 || InputX < -0.03)
+        {
+            Volante.transform.Rotate(0, 0, -InputX);
+        }
+        else
+        {
+            Volante.transform.localRotation = _initialOrientation;
+        }
         if (LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0))
         {
             LogitechGSDK.DIJOYSTATE2ENGINES rec;
