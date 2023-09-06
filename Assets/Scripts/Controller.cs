@@ -39,6 +39,10 @@ public class Controller : MonoBehaviour
     public AudioClip BalizasSFX;
     public GameObject Volante;
     public Quaternion _initialOrientation;
+    public Titilar guinoDerReal;
+    public Titilar guinoIzqReal;
+    public Titilar BalizasReal;
+
 
 
     private void Start()
@@ -61,14 +65,14 @@ public class Controller : MonoBehaviour
     private void Update()
     {
         // Rotar el volante, no el auto
-        if (InputX >= 0.03 || InputX < -0.03)
-        {
-            Volante.transform.Rotate(0, 0, -InputX);
-        }
-        else
+        //if (InputX > 0.03 || InputX < -0.03)
+        //{
+        //    Volante.transform.Rotate(0, 0, -InputX);
+        //}
+       /* else
         {
             Volante.transform.localRotation = _initialOrientation;
-        }
+        }*/
         if (LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0))
         {
             LogitechGSDK.DIJOYSTATE2ENGINES rec;
@@ -125,6 +129,7 @@ public class Controller : MonoBehaviour
             {
                 Audio.Stop();
                 guinoIzq = false;
+
             }
             else
             {
@@ -136,8 +141,10 @@ public class Controller : MonoBehaviour
         {
             if (Balizas == true)
             {
+               
                 Audio.Stop();
                 Balizas = false;
+
             }
             else
             {
@@ -159,7 +166,10 @@ public class Controller : MonoBehaviour
         }
         if (guinoDer == true)
         {
-            Audio.PlayOneShot(BalizasSFX);
+            
+
+            if (!Audio.isPlaying)
+                Audio.PlayOneShot(BalizasSFX);
             guinoDerFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 0.5f));
         }
         if (guinoDer == false)
@@ -169,8 +179,10 @@ public class Controller : MonoBehaviour
         }
         if (guinoIzq == true)
         {
-            Audio.PlayOneShot(BalizasSFX);
+            if (!Audio.isPlaying)
+                Audio.PlayOneShot(BalizasSFX);
             guinoIzqFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 0.5f));
+            
         }
         if (guinoIzq == false)
         {
@@ -179,9 +191,11 @@ public class Controller : MonoBehaviour
         }
         if (Balizas == true)
         {
-            
-            Audio.PlayOneShot(BalizasSFX);
+            if (!Audio.isPlaying)
+                Audio.PlayOneShot(BalizasSFX);
             BalizasFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 0.5f));
+            
+
         }
         if (Balizas == false)
         {
