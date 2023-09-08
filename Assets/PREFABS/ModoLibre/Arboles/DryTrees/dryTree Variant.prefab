@@ -57,7 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3b85fffb0d3a7c7ccac4930232997dd7, type: 2}
     - target: {fileID: 919132149155446097, guid: a447a4862bfecf9b48155669d7db9f02, type: 3}
       propertyPath: m_Name
-      value: dryTree
+      value: dryTree Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a447a4862bfecf9b48155669d7db9f02, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a447a4862bfecf9b48155669d7db9f02, type: 3}

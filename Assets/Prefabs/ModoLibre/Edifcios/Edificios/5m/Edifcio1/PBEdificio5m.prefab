@@ -87,6 +87,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Planta Baja '
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 225b71aa7c97d424ea461196fae2bc6a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 225b71aa7c97d424ea461196fae2bc6a, type: 3}
 --- !u!4 &5816807720597149334 stripped

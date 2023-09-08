@@ -87,6 +87,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piso
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8fc62853a008ec545b1f1605b679c94f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fc62853a008ec545b1f1605b679c94f, type: 3}
 --- !u!4 &4427959769388326983 stripped
