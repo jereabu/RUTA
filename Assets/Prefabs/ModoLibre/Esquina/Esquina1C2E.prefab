@@ -87,6 +87,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: esquina 1 carril 2 estacionamiento
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aaff01926b1cc7e49a59d4368be2f681, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaff01926b1cc7e49a59d4368be2f681, type: 3}
 --- !u!1 &2317298216630162060 stripped
