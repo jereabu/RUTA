@@ -572,7 +572,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1927509868760415058, guid: dd5827982f3070441a46c3830f815911, type: 3}
       propertyPath: m_Name
-      value: btn_BackToModes
+      value: btn_Back
       objectReference: {fileID: 0}
     - target: {fileID: 8450185659391347678, guid: dd5827982f3070441a46c3830f815911, type: 3}
       propertyPath: m_Pivot.x
@@ -640,11 +640,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8450185659391347678, guid: dd5827982f3070441a46c3830f815911, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -350
+      value: -344
       objectReference: {fileID: 0}
     - target: {fileID: 8450185659391347678, guid: dd5827982f3070441a46c3830f815911, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 184.7
+      value: 176.5
       objectReference: {fileID: 0}
     - target: {fileID: 8450185659391347678, guid: dd5827982f3070441a46c3830f815911, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

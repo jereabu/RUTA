@@ -417,6 +417,7 @@ GameObject:
   - component: {fileID: 4029233909446103345}
   - component: {fileID: 4029233909446103344}
   - component: {fileID: 8582423245742685329}
+  - component: {fileID: 7521455851469735990}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -432,7 +433,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4029233909446103359}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 0.75, z: 0.22}
+  m_LocalPosition: {x: -0.4, y: 0.75, z: 0.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -455,7 +456,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 10.069196
+  m_FocalLength: 12.958822
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -464,7 +465,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 150
-  field of view: 100
+  field of view: 85.6
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -523,6 +524,15 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!45 &7521455851469735990
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4029233909446103359}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 01f4eb1c73693428d923f1520032e7f9, type: 2}
 --- !u!1 &4029233909633594073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,7 +1109,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4029233910979841871}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bff9a1a42325714a8fd6f53d0fda0f4, type: 3}
   m_Name: 
@@ -1110,8 +1120,8 @@ MonoBehaviour:
   - {fileID: 4029233909444882359}
   - {fileID: 4029233909633594075}
   FrontWheels:
-  - {fileID: 4029233911287598453}
-  - {fileID: 4029233909749314832}
+  - {fileID: 0}
+  - {fileID: 0}
   steerPower: 100
   motorPower0: -20
   motorPower1: 30
@@ -1271,8 +1281,8 @@ MonoBehaviour:
   - {fileID: 4029233909444882359}
   - {fileID: 4029233909633594075}
   FrontWheels:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4029233911287598453}
+  - {fileID: 4029233909749314832}
   steerPower: 100
   motorPower0: -20
   motorPower1: 30
@@ -1281,7 +1291,7 @@ MonoBehaviour:
   motorPower4: 150
   motorPower5: 200
   rb: {fileID: 0}
-  CenterOfMass: {fileID: 0}
+  CenterOfMass: {fileID: 4029233909736225605}
   motorSpeed: 0
   cambio: 1
   cambiable: 0
