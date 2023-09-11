@@ -264,7 +264,7 @@ public class Controller : MonoBehaviour
                 {
                     wheel.motorTorque = acelerador * motorPower1;
                 }
-                Debug.Log("Cambio 1");
+                //Debug.Log("Cambio 1");
                 }
                 if (cambio == 2)// Cambio 2
                 {

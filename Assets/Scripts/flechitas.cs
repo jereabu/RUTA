@@ -145,7 +145,7 @@ if (Input.GetKeyUp(KeyCode.UpArrow) && !guinoIzq && !Balizas)
             if (cambio == 1)// Cambio 1
             {
                 wheel.motorTorque = Input.GetAxis("Vertical") * motorPower1;
-                Debug.Log("Cambio 1");
+                //Debug.Log("Cambio 1");
             }
             if (cambio == 2)// Cambio 2
             {

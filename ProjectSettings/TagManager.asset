@@ -20,6 +20,7 @@ TagManager:
   - guinoDerFoto
   - guinoIzqFoto
   - balizasFoto
+  - Wheel
   layers:
   - Default
   - TransparentFX
