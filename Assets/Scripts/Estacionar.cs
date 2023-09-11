@@ -17,7 +17,7 @@ public class Estacionar : MonoBehaviour
         {
             wheelsInsideTrigger++;
 
-            Debug.Log("DENTROOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
+            Debug.Log("DENTRO");
         }
 
         CheckIfAllWheelsInside();
@@ -27,7 +27,7 @@ public class Estacionar : MonoBehaviour
         if (other.CompareTag("Wheel"))
         {
             wheelsInsideTrigger--;
-            Debug.Log("FUERAAAAAAAAAAAAAAAAAAAAAAAAAA.");
+            Debug.Log("FUERA.");
         }
 
         CheckIfAllWheelsInside();
@@ -38,7 +38,7 @@ public class Estacionar : MonoBehaviour
         if (wheelsInsideTrigger >= 4) 
          {
         
-           Debug.Log("Todas las ruedas están dentro del trigger. Nivel completado.");
+           Debug.Log("Has estacionado correctamente");
       
          }
 
