@@ -21,6 +21,11 @@ TagManager:
   - guinoIzqFoto
   - balizasFoto
   - Wheel
+  - LVLS_1
+  - DLVL_2
+  - DLVL_1
+  - LVL_COM
+  - Complete
   layers:
   - Default
   - TransparentFX
