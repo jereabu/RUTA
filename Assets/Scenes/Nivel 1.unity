@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -938,6 +938,7 @@ GameObject:
   - component: {fileID: 538274907}
   - component: {fileID: 538274910}
   - component: {fileID: 538274906}
+  - component: {fileID: 538274911}
   m_Layer: 0
   m_Name: EstacionarTrigger
   m_TagString: Untagged
@@ -968,8 +969,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 3, z: 5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.242096, y: 3, z: 5.0405884}
+  m_Center: {x: -0.37895203, y: 0, z: -0.02029419}
 --- !u!4 &538274909
 Transform:
   m_ObjectHideFlags: 0
@@ -998,6 +999,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionArea: {fileID: 538274907}
+--- !u!114 &538274911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538274905}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bff9a1a42325714a8fd6f53d0fda0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheels: []
+  FrontWheels: []
+  steerPower: 0
+  motorPower0: -40
+  motorPower1: 30
+  motorPower2: 75
+  motorPower3: 120
+  motorPower4: 160
+  motorPower5: 200
+  rb: {fileID: 0}
+  Audio: {fileID: 0}
+  CenterOfMass: {fileID: 0}
+  motorSpeed: 0
+  cambiable: 0
+  frenable: 0
+  cambiazo: 0
+  freno: 0
+  embrague: 0
+  InputX: 0
+  guinoDer: 0
+  guinoDerFoto: {fileID: 0}
+  guinoIzq: 0
+  guinoIzqFoto: {fileID: 0}
+  Balizas: 0
+  BalizasFoto: {fileID: 0}
+  colorInicio: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  colorFinal: {r: 1, g: 1, b: 1, a: 1}
+  BalizasSFX: {fileID: 0}
+  Volante: {fileID: 0}
+  _initialOrientation: {x: 0, y: 0, z: 0, w: 0}
+  guinoDerReal: {fileID: 0}
+  guinoIzqReal: {fileID: 0}
+  BalizasReal: {fileID: 0}
 --- !u!4 &539977525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4065567882746010168, guid: e368c2d4cacfdd549b4f8d7c5d67a510, type: 3}

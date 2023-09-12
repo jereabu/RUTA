@@ -9,12 +9,14 @@ public class Estacionar : MonoBehaviour
 
     private bool detected = false;
 
+    private Controller controller;
+
     // Start is called before the first frame update
 
-    
+
     void Start()
     {
-        
+        controller = GetComponent<Controller>();
     }
 
     // Update is called once per frame
@@ -47,7 +49,7 @@ public class Estacionar : MonoBehaviour
     private void CheckIfAllWheelsInside()
     {
    
-        if (wheelsInsideTrigger >= 4) 
+        if (wheelsInsideTrigger >= 4 && Controller.cambio == -1) 
          {
         
            Debug.Log("Has estacionado correctamente");
