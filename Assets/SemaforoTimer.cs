@@ -6,12 +6,17 @@ public class SemaforoTimer : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    public GameObject RedL;
+    public GameObject GreenL;
+
     public GameObject Trigg;
     public float RTime;
     [SerializeField] private float CRTime;
+    private bool Translated = false;
     void Start()
     {
         CRTime = RTime;
+        GreenL.SetActive(false);
     }
 
     // Update is called once per frame
@@ -23,14 +28,30 @@ public class SemaforoTimer : MonoBehaviour
         }
         if(CRTime <= 0)
         {
-            if(Trigg.activeInHierarchy == true)
+            if (Translated)
             {
-                Trigg.SetActive(false);
+                Trigg.transform.Translate(0, 10, 0);
+                Translated = false;
+                GreenL.SetActive(false);
+                RedL.SetActive(true);
+            }
+            else
+            {
+                Trigg.transform.Translate(0, -10, 0);
+                Translated = true;
+                GreenL.SetActive(true);
+                RedL.SetActive(false);
+            }
+            
+
+            /*if (Trigg.activeInHierarchy == true)
+            {
+                
             }
             else
             {
                 Trigg.SetActive(true);
-            }
+            }*/
             
             
             CRTime = RTime;

@@ -75,7 +75,16 @@ public class CarEngine : MonoBehaviour {
     }
 
     private void CheckWaypointDistance() {
-        if(Vector3.Distance(transform.position, nodes[currectNode].position) < 0.5f) {
+        if (Vector3.Distance(transform.position, nodes[currectNode].position) < 5f)
+        {
+            maxSpeed = 30f;
+        }
+        else
+        {
+            maxSpeed = 100f;
+        }
+
+        if (Vector3.Distance(transform.position, nodes[currectNode].position) < 0.5f) {
             if(currectNode == nodes.Count - 1) {
                 currectNode = 0;
             } else {
