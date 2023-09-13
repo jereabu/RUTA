@@ -3,40 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - HumanNPC
-  - MODES
-  - UIButtons
-  - MLES_1
-  - MenuUI
-  - TrafficLVertical
-  - TrafficLHorizontal
-  - Revs
-  - balizas
-  - guinoDer
-  - guinoIzq
-  - Vel
-  - cambio
-  - guinoDerFoto
-  - guinoIzqFoto
-  - balizasFoto
-  - Wheel
-  - LVLS_1
-  - DLVL_2
-  - DLVL_1
-  - LVL_COM
-  - Complete
-<<<<<<< Updated upstream
-  - Bumper
-  - Stopper
-=======
-  - cam
->>>>>>> Stashed changes
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Effects
+  - 
   - Water
   - UI
   - 
