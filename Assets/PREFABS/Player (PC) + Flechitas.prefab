@@ -1109,19 +1109,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4029233910979841871}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bff9a1a42325714a8fd6f53d0fda0f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wheels:
-  - {fileID: 4029233909937377443}
-  - {fileID: 4029233910497225532}
-  - {fileID: 4029233909444882359}
-  - {fileID: 4029233909633594075}
+  - {fileID: 4679330845644702899, guid: 954523ab60e9ed449b8c6ec44e82639e, type: 3}
+  - {fileID: 4679330846426922796, guid: 954523ab60e9ed449b8c6ec44e82639e, type: 3}
+  - {fileID: 4679330845331520423, guid: 954523ab60e9ed449b8c6ec44e82639e, type: 3}
+  - {fileID: 4679330845411239627, guid: 954523ab60e9ed449b8c6ec44e82639e, type: 3}
   FrontWheels:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4679330846978185573, guid: 954523ab60e9ed449b8c6ec44e82639e, type: 3}
+  - {fileID: 4679330845565657344, guid: 954523ab60e9ed449b8c6ec44e82639e, type: 3}
   steerPower: 100
   motorPower0: -20
   motorPower1: 30
@@ -1131,7 +1131,7 @@ MonoBehaviour:
   motorPower5: 200
   rb: {fileID: 0}
   Audio: {fileID: 0}
-  CenterOfMass: {fileID: 4029233909736225605}
+  CenterOfMass: {fileID: 4679330845576785749, guid: 954523ab60e9ed449b8c6ec44e82639e, type: 3}
   motorSpeed: 0
   cambiable: 0
   frenable: 0

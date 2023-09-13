@@ -227,24 +227,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4208187743096597698, guid: 02d319cc1eeb732459816febefbc244b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4208187743096597698, guid: 02d319cc1eeb732459816febefbc244b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 310135635}
     - target: {fileID: 4208187743096597698, guid: 02d319cc1eeb732459816febefbc244b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenModeSelector
-      objectReference: {fileID: 0}
-    - target: {fileID: 4208187743096597698, guid: 02d319cc1eeb732459816febefbc244b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIButtons, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4208187743096597698, guid: 02d319cc1eeb732459816febefbc244b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7999254179717133716, guid: 02d319cc1eeb732459816febefbc244b, type: 3}
       propertyPath: m_IsActive
@@ -310,6 +298,7 @@ MonoBehaviour:
   LVLS_1: []
   DLVL_1: []
   DLVL_2: []
+  LVL_COM: []
 --- !u!4 &381604243 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2498879393700220159, guid: e01222271116d124c87b389e90e41869, type: 3}

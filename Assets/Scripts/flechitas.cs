@@ -136,7 +136,7 @@ if (Input.GetKeyUp(KeyCode.UpArrow) && !guinoIzq && !Balizas)
             }
             else if (Input.GetKey(KeyCode.W) == false && frenable && Input.GetKey(KeyCode.F))
             {
-                Debug.Log("Punto muerto");
+                Debug.Log("Punto muerto (-1)");
                 cambio = -1;
             }
 
@@ -175,7 +175,7 @@ if (Input.GetKeyUp(KeyCode.UpArrow) && !guinoIzq && !Balizas)
                 if (cambio == -1) //Punto Muerto o freno de mano
                 {
                     wheel.motorTorque = Input.GetAxis("Vertical") * 0;
-                    Debug.Log("Punto Muerto");
+                    Debug.Log("Punto Muerto (-1)");
                     rb.constraints = RigidbodyConstraints.FreezePosition;
                 }
 

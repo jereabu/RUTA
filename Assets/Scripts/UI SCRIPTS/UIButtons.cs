@@ -45,7 +45,17 @@ public class UIButtons : MonoBehaviour
         {
             DLVL_2[i].SetActive(false);
         }
+        for (int i = 0; i < LVL_COM.Length; i++)
+        {
+            DLVL_2[i].SetActive(false);
+        }
+        for (int i = 0; i < LVL_COM.Length; i++)
+        {
+            LVL_COM[i].SetActive(false);
+        }
     }
+
+     
     public void LoadGame(string Scene)
     {
         SceneManager.LoadScene(Scene);
@@ -73,8 +83,11 @@ public class UIButtons : MonoBehaviour
         {
             DLVL_2[i].SetActive(false);
         }
+        for (int i = 0; i < LVL_COM.Length; i++)
+        {
+            LVL_COM[i].SetActive(false);
+        }
 
-       
     }
 
     public void OpenLevelSelector(bool state)
@@ -99,7 +112,10 @@ public class UIButtons : MonoBehaviour
         {
             DLVL_2[i].SetActive(false);
         }
-       
+        for (int i = 0; i < LVL_COM.Length; i++)
+        {
+            LVL_COM[i].SetActive(false);
+        }
     }
 
     public void OpenDescriptionNivel1Selector(bool state)
@@ -125,7 +141,10 @@ public class UIButtons : MonoBehaviour
         {
             DLVL_2[i].SetActive(false);
         }
-        
+        for (int i = 0; i < LVL_COM.Length; i++)
+        {
+            LVL_COM[i].SetActive(false);
+        }
     }
     public void OpenDescriptionNivel2Selector(bool state)
     {
@@ -149,8 +168,11 @@ public class UIButtons : MonoBehaviour
         {
             DLVL_1[i].SetActive(false);
         }
+        for (int i = 0; i < LVL_COM.Length; i++)
+        {
+            LVL_COM[i].SetActive(false);
+        }
 
-       
     }
 
     public void OpenLevelCompletedSelector(bool state)
@@ -181,6 +203,13 @@ public class UIButtons : MonoBehaviour
         }
 
     }
-
+    public void DesactivarOpenLevelCompletedSelector(bool state)
+    {
+        for (int i = 0; i < LVL_COM.Length; i++)
+        {
+            LVL_COM[i].SetActive(false);
+        }
+  
+    }
 }
 

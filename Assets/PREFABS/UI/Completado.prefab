@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 1995916975391852096}
   - component: {fileID: 3819499135215099728}
   m_Layer: 5
-  m_Name: Image
+  m_Name: img_backround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,8 +139,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 19}
-  m_SizeDelta: {x: 252.4294, y: 155.8989}
+  m_AnchoredPosition: {x: 0, y: 20}
+  m_SizeDelta: {x: 315.6416, y: 194.9384}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1995916975391852096
 CanvasRenderer:
@@ -163,14 +163,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.8160377, b: 0.8160377, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d1f204c32b545384cb599b7946885922, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a195d9b2dadf7684198f390730434780, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 5273847569387603300}
   - component: {fileID: 8827388392978885951}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: img_Titulo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,8 +215,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 60}
-  m_SizeDelta: {x: 184.1096, y: 24.2449}
+  m_AnchoredPosition: {x: 0, y: 65.1}
+  m_SizeDelta: {x: 230.2135, y: 30.3162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5273847569387603300
 CanvasRenderer:
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 3542483570376178808}
   - component: {fileID: 628444281445513598}
   m_Layer: 5
-  m_Name: Button
+  m_Name: btn_reset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -292,8 +292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 110.4687, y: 28.9146}
+  m_AnchoredPosition: {x: 0, y: 19.1}
+  m_SizeDelta: {x: 138.1317, y: 36.1553}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8337613563287819666
 CanvasRenderer:
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 3382787565005233814}
   - component: {fileID: 1257157517947443310}
   m_Layer: 5
-  m_Name: Button
+  m_Name: bttn_backmenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -413,8 +413,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -20}
-  m_SizeDelta: {x: 138.3898, y: 30.3214}
+  m_AnchoredPosition: {x: 0, y: -33.6}
+  m_SizeDelta: {x: 173.0447, y: 37.9143}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3586923674013794314
 CanvasRenderer:
