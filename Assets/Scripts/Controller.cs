@@ -39,9 +39,11 @@ public class Controller : MonoBehaviour
     public AudioClip BalizasSFX;
     public GameObject Volante;
     public Quaternion _initialOrientation;
-    public Titilar guinoDerReal;
+    public GameObject camera;
+    public bool girada = false;
+  /*  public Titilar guinoDerReal;
     public Titilar guinoIzqReal;
-    public Titilar BalizasReal;
+    public Titilar BalizasReal;*/
 
 
 
@@ -59,20 +61,32 @@ public class Controller : MonoBehaviour
         guinoIzqImage.color = Color.grey;
         BalizasImage.color = Color.grey;
         _initialOrientation = transform.localRotation;
+        camera = GameObject.FindGameObjectWithTag("cam");
+
 
 
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.T) && girada == false)
+        {
+            camera.transform.rotation = Quaternion.Euler(0f, 120f, 0f);
+            girada = true;
+        }
+        if (Input.GetKeyDown(KeyCode.T) && girada)
+        {
+            camera.transform.rotation = Quaternion.Euler(0f, 120f, 0f);
+            girada = false;
+        }
         // Rotar el volante, no el auto
         //if (InputX > 0.03 || InputX < -0.03)
         //{
         //    Volante.transform.Rotate(0, 0, -InputX);
         //}
-       /* else
-        {
-            Volante.transform.localRotation = _initialOrientation;
-        }*/
+        /* else
+         {
+             Volante.transform.localRotation = _initialOrientation;
+         }*/
         if (LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0))
         {
             LogitechGSDK.DIJOYSTATE2ENGINES rec;
@@ -207,7 +221,7 @@ public class Controller : MonoBehaviour
 
     void FixedUpdate()
     {
-
+        
         if (acelerador > 0 && cambio >= 0)
         {
      

@@ -47,7 +47,7 @@ public class UIButtons : MonoBehaviour
         }
         for (int i = 0; i < LVL_COM.Length; i++)
         {
-            DLVL_2[i].SetActive(false);
+            //DLVL_2[i].SetActive(false);
         }
         for (int i = 0; i < LVL_COM.Length; i++)
         {

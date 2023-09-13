@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class Estacionar : MonoBehaviour
 {
@@ -16,6 +19,7 @@ public class Estacionar : MonoBehaviour
     private int Cambio = 0;
     bool Completado;
     public GameObject UI;
+   
 
     // Start is called before the first frame update
 
