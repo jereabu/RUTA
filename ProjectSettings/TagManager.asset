@@ -26,6 +26,8 @@ TagManager:
   - DLVL_1
   - LVL_COM
   - Complete
+  - Bumper
+  - Stopper
   layers:
   - Default
   - TransparentFX
