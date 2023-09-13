@@ -8,10 +8,11 @@ public class Estacionar : MonoBehaviour
     private int wheelsInsideTrigger = 0;
 
 
-    //public Controller controller;
+    
 
-    public flechitas Flechitas;
-    public flechitas valor_cambio;
+    //public flechitas Flechitas;
+    //public flechitas valor_cambio;
+    public Controller valor_cambio;
     private int Cambio = 0;
     bool Completado;
     public GameObject UI;
@@ -21,7 +22,7 @@ public class Estacionar : MonoBehaviour
 
     void Start()
     {
-        valor_cambio = FindObjectOfType<flechitas>();
+        valor_cambio = FindObjectOfType<Controller>();
         UI.SetActive(false);
     }
 
@@ -29,7 +30,7 @@ public class Estacionar : MonoBehaviour
     void Update()
     {
         Debug.Log(wheelsInsideTrigger);
-        Cambio = valor_cambio.cambio;
+        Cambio = Controller.cambio;
         
 
         Debug.Log("valor cambio es: "+Cambio);
@@ -53,7 +54,7 @@ public class Estacionar : MonoBehaviour
             Debug.Log("DENTRO");
         }
 
-        //CheckIfAllWheelsInside();
+        //CheckIfAllWheelsInside(); 
     }
     private void OnTriggerExit(Collider other)
     {
