@@ -26,8 +26,12 @@ TagManager:
   - DLVL_1
   - LVL_COM
   - Complete
+<<<<<<< Updated upstream
   - Bumper
   - Stopper
+=======
+  - cam
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
