@@ -41,6 +41,8 @@ public class Controller : MonoBehaviour
     public Quaternion _initialOrientation;
     public GameObject camera;
     public bool girada = false;
+   
+   
   /*  public Titilar guinoDerReal;
     public Titilar guinoIzqReal;
     public Titilar BalizasReal;*/
@@ -68,16 +70,17 @@ public class Controller : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T) && girada == false)
+        /*if (Input.GetKeyDown(KeyCode.T) && !girada)
         {
             camera.transform.rotation = Quaternion.Euler(0f, 120f, 0f);
+            Debug.Log("Alguien mas me esta modificando");
             girada = true;
         }
         if (Input.GetKeyDown(KeyCode.T) && girada)
         {
-            camera.transform.rotation = Quaternion.Euler(0f, 120f, 0f);
+            camera.transform.rotation = Quaternion.Euler(0f, -120f, 0f);
             girada = false;
-        }
+        }*/
         // Rotar el volante, no el auto
         //if (InputX > 0.03 || InputX < -0.03)
         //{
