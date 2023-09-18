@@ -63,7 +63,7 @@ public class Controller : MonoBehaviour
         guinoIzqImage.color = Color.grey;
         BalizasImage.color = Color.grey;
         _initialOrientation = transform.localRotation;
-        camera = GameObject.FindGameObjectWithTag("cam");
+       // camera = GameObject.FindGameObjectWithTag("cam");
 
 
 
@@ -281,7 +281,7 @@ public class Controller : MonoBehaviour
                 {
                     wheel.motorTorque = acelerador * motorPower1;
                 }
-                Debug.Log("Cambio 1");
+                //Debug.Log("Cambio 1");
                 }
                 if (cambio == 2)// Cambio 2
                 {
@@ -289,7 +289,7 @@ public class Controller : MonoBehaviour
                 {
                     wheel.motorTorque = acelerador * motorPower2;
                 }
-                Debug.Log("Cambio 2");
+               // Debug.Log("Cambio 2");
                 }
                 if (cambio == 3)// Cambio 3
                 {
@@ -297,7 +297,7 @@ public class Controller : MonoBehaviour
                 {
                     wheel.motorTorque = acelerador * motorPower3;
                 }
-                Debug.Log("Cambio 3");
+              //  Debug.Log("Cambio 3");
                 }
                 if (cambio == 4) // Cambio 4
                 {
@@ -305,7 +305,7 @@ public class Controller : MonoBehaviour
                         {
                             wheel.motorTorque = acelerador * motorPower4;
                         }
-                Debug.Log("Cambio 4");
+              //  Debug.Log("Cambio 4");
                 }
                 if (cambio == 5) // Cambio 5
                 {
@@ -315,7 +315,7 @@ public class Controller : MonoBehaviour
                         wheel.motorTorque = acelerador * motorPower5;
                     }
                     
-                    Debug.Log("Cambio 5");
+                 //   Debug.Log("Cambio 5");
                     //acelerador -= 1;
                 }
                 if (cambio == 0) //Reversa
