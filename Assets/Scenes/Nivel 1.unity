@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3279,6 +3279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1328382608}
   - component: {fileID: 1328382607}
+  - component: {fileID: 1328382609}
   m_Layer: 0
   m_Name: '[UiBottons]'
   m_TagString: Untagged
@@ -3324,6 +3325,19 @@ RectTransform:
   m_AnchoredPosition: {x: 552, y: 310.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1328382609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328382606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71d2805bd7297a43bdcd965aaa8402b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenuUI: 
 --- !u!1001 &1330739343
 PrefabInstance:
   m_ObjectHideFlags: 0
