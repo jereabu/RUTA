@@ -244,11 +244,14 @@ public class Controller : MonoBehaviour
         }
 
         //Arrancar el auto
-        if (Input.GetKey(KeyCode.Q) && cambiable)
+        if (Input.GetKey(KeyCode.Q) && cambiable && cambio >= 0 && cambiazo)
         {
             rb.constraints = RigidbodyConstraints.None;
-            cambio = 1;
+            
+            cambio -= 1;
+            cambiazo = false;
             Debug.Log("Arrancado");
+
 
         }
         // Hacer que funcionen los cambios
