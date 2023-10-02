@@ -5,8 +5,8 @@ using System.Collections.Generic;
 public class Titilar : MonoBehaviour
 {
     public bool blinking = false;
-    public float Tiempo;
-    public float TiempoBlink = 0.5f;
+    public float Tiempo = 1;
+    public float TiempoBlink = 1;
     public Renderer MR;
     private void Awake()
     {
@@ -17,6 +17,7 @@ public class Titilar : MonoBehaviour
     void Update()
     {
         
+        /*
             if (Time.fixedTime % .5 < .3)
             {
                 MR.enabled = false;
@@ -25,9 +26,9 @@ public class Titilar : MonoBehaviour
             {
                 MR.enabled = true;
             }
-        
-    }
-        /* if (blinking == true)
+        */
+    
+         if (blinking == true)
          {
              Tiempo -= Time.deltaTime;
              MR.enabled = MR.enabled;
@@ -38,8 +39,13 @@ public class Titilar : MonoBehaviour
 
              }
          }
+         else if (!blinking)
+        {
+            MR.enabled = !MR.enabled;
+        }
      }
-     public void PressBlinker()
+     
+public void PressBlinker()
      {
          blinking = !blinking;
          if(!blinking )
@@ -47,5 +53,5 @@ public class Titilar : MonoBehaviour
              Tiempo = TiempoBlink;
              MR.enabled = false;
          }
-     }*/
+     }
     }

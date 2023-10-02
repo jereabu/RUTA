@@ -37,7 +37,6 @@ public class Controller : MonoBehaviour
     public Color colorInicio = Color.grey;
     public Color colorFinal = Color.white;
     public AudioClip BalizasSFX;
-    public GameObject Volante;
     public Quaternion _initialOrientation;
     public GameObject camera;
     public bool girada = false;

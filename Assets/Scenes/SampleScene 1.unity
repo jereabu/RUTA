@@ -172,7 +172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &23815468
 Transform:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23815467}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.35, y: 0.474, z: 0.656}
+  m_LocalPosition: {x: 0.35, y: 0.474, z: 0.474}
   m_LocalScale: {x: 0.6713, y: 0.7091, z: 0.2182}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -360,7 +360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &79934978
 Transform:
   m_ObjectHideFlags: 0
@@ -2670,7 +2670,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &999279624
 Transform:
   m_ObjectHideFlags: 0
@@ -3410,7 +3410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1164648370
 Transform:
   m_ObjectHideFlags: 0
@@ -4421,9 +4421,8 @@ MonoBehaviour:
   BalizasSFX: {fileID: 8300000, guid: 8043ba034d5dc5e4abdbe55c4e307b28, type: 3}
   Volante: {fileID: 309168674}
   _initialOrientation: {x: 0, y: 0, z: 0, w: 0}
-  guinoDerReal: {fileID: 846707411}
-  guinoIzqReal: {fileID: 200006075}
-  BalizasReal: {fileID: 568197011}
+  camera: {fileID: 0}
+  girada: 0
 --- !u!54 &1558158518
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6213,9 +6212,8 @@ MonoBehaviour:
   BalizasSFX: {fileID: 8300000, guid: 8043ba034d5dc5e4abdbe55c4e307b28, type: 3}
   Volante: {fileID: 0}
   _initialOrientation: {x: 0, y: 0, z: 0, w: 0}
-  guinoDerReal: {fileID: 0}
-  guinoIzqReal: {fileID: 0}
-  BalizasReal: {fileID: 0}
+  camera: {fileID: 0}
+  girada: 0
 --- !u!54 &919132148818620001
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9035,9 +9033,8 @@ MonoBehaviour:
   BalizasSFX: {fileID: 8300000, guid: 8043ba034d5dc5e4abdbe55c4e307b28, type: 3}
   Volante: {fileID: 23815467}
   _initialOrientation: {x: 0, y: 0, z: 0, w: 0}
-  guinoDerReal: {fileID: 79934979}
-  guinoIzqReal: {fileID: 999279625}
-  BalizasReal: {fileID: 1164648371}
+  camera: {fileID: 0}
+  girada: 0
 --- !u!114 &6412373124505381610
 MonoBehaviour:
   m_ObjectHideFlags: 0
