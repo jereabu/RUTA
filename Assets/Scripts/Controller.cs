@@ -38,7 +38,6 @@ public class Controller : MonoBehaviour
     public Color colorFinal = Color.white;
     public AudioClip BalizasSFX;
     public Quaternion _initialOrientation;
-    public GameObject camera;
     public bool girada = false;
    
    
@@ -69,6 +68,7 @@ public class Controller : MonoBehaviour
     }
     private void Update()
     {
+        
         /*if (Input.GetKeyDown(KeyCode.T) && !girada)
         {
             camera.transform.rotation = Quaternion.Euler(0f, 120f, 0f);
@@ -93,14 +93,15 @@ public class Controller : MonoBehaviour
         {
             LogitechGSDK.DIJOYSTATE2ENGINES rec;
             rec = LogitechGSDK.LogiGetStateUnity(0);
+            //C
             InputX = rec.lX / 32768f; // 1 0 -1
             if ( rec.lZ  > 0)
             {
-                acelerador = 0;
+                embrague = 0;
             }
             else if (rec.lZ < 0)
             {
-                acelerador = rec.lZ / -32768f;
+                embrague = rec.lZ / -32768f;
             }
 
             if (rec.lRz > 0)
@@ -111,14 +112,15 @@ public class Controller : MonoBehaviour
             {
                 freno = rec.lRz / -32768f;
             }
-            if (rec.lY > 0)
-            {
-                embrague = 0;
-            }
-            else if (rec.lY < 0)
-            {
-                embrague = rec.lY / -32768f;
-            }
+
+
+            acelerador = rec.lY;
+            acelerador += 32768f;
+            acelerador /= 65535f;
+            acelerador = 1 - acelerador;
+            Debug.Log(acelerador);
+
+  
         }
         //tpear arriba
         if (Input.GetKeyDown(KeyCode.Space))
@@ -279,7 +281,7 @@ public class Controller : MonoBehaviour
         {
                 if (cambio == 1)// Cambio 1
                 {
-                if (acelerador > 0.5f || wheel.motorTorque == 0 && freno <= 0.4f)
+                if (acelerador > 0.1f || wheel.motorTorque == 0 && freno <= 0.4f)
                 {
                     wheel.motorTorque = acelerador * motorPower1;
                 }
