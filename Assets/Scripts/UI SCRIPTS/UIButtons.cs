@@ -9,7 +9,7 @@ public class UIButtons : MonoBehaviour
     [SerializeField] GameObject[] MODES; //Mode Selector UI
     [SerializeField] GameObject[] LVLS_1; //Nivel Selector UI 
     [SerializeField] GameObject[] DLVL_1; //Description Nivel1 Selector UI 
-    [SerializeField] GameObject[] DLVL_2; //Description Nivel2 Selector UI 
+    //[SerializeField] GameObject[] DLVL_2; //Description Nivel2 Selector UI 
     [SerializeField] GameObject[] LVL_COM; //Level Completed Selector UI
 
 
@@ -24,8 +24,10 @@ public class UIButtons : MonoBehaviour
         MODES = GameObject.FindGameObjectsWithTag("MODES");
         LVLS_1 = GameObject.FindGameObjectsWithTag("LVLS_1");
         DLVL_1 = GameObject.FindGameObjectsWithTag("DLVL_1");
-        DLVL_2 = GameObject.FindGameObjectsWithTag("DLVL_2");
+        //DLVL_2 = GameObject.FindGameObjectsWithTag("DLVL_2");
         LVL_COM = GameObject.FindGameObjectsWithTag("LVL_COM");
+
+        
 
         for (int i = 0; i < MODES.Length; i++)
         {
@@ -41,14 +43,7 @@ public class UIButtons : MonoBehaviour
         {
             DLVL_1[i].SetActive(false);
         }
-        for (int i = 0; i < DLVL_2.Length; i++)
-        {
-            DLVL_2[i].SetActive(false);
-        }
-        for (int i = 0; i < LVL_COM.Length; i++)
-        {
-            //DLVL_2[i].SetActive(false);
-        }
+       
         for (int i = 0; i < LVL_COM.Length; i++)
         {
             LVL_COM[i].SetActive(false);
@@ -79,10 +74,7 @@ public class UIButtons : MonoBehaviour
         {
             DLVL_1[i].SetActive(false);
         }
-        for (int i = 0; i < DLVL_2.Length; i++)
-        {
-            DLVL_2[i].SetActive(false);
-        }
+     
         for (int i = 0; i < LVL_COM.Length; i++)
         {
             LVL_COM[i].SetActive(false);
@@ -108,10 +100,7 @@ public class UIButtons : MonoBehaviour
         {
             DLVL_1[i].SetActive(false);
         }
-        for (int i = 0; i < DLVL_2.Length; i++)
-        {
-            DLVL_2[i].SetActive(false);
-        }
+       
         for (int i = 0; i < LVL_COM.Length; i++)
         {
             LVL_COM[i].SetActive(false);
@@ -137,10 +126,7 @@ public class UIButtons : MonoBehaviour
         {
             MODES[i].SetActive(false);
         }
-        for (int i = 0; i < DLVL_2.Length; i++)
-        {
-            DLVL_2[i].SetActive(false);
-        }
+       
         for (int i = 0; i < LVL_COM.Length; i++)
         {
             LVL_COM[i].SetActive(false);
@@ -152,10 +138,7 @@ public class UIButtons : MonoBehaviour
         {
             UIElements[i].SetActive(state);
         }
-        for (int i = 0; i < DLVL_2.Length; i++)
-        {
-            DLVL_2[i].SetActive(!state);
-        }
+     
         for (int i = 0; i < LVLS_1.Length; i++)
         {
             LVLS_1[i].SetActive(!state);
@@ -181,10 +164,7 @@ public class UIButtons : MonoBehaviour
         {
             UIElements[i].SetActive(state);
         }
-        for (int i = 0; i < DLVL_2.Length; i++)
-        {
-            DLVL_2[i].SetActive(!false);
-        }
+     
         for (int i = 0; i < LVLS_1.Length; i++)
         {
             LVLS_1[i].SetActive(!false);
