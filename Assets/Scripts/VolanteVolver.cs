@@ -14,14 +14,12 @@ public class VolanteVolver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Giro();
         inputX = controller.InputX;
-        Centro.eulerAngles = new Vector3(0,0,1) * 450 * - controller.InputX;
-        
 
+        // Crear una rotación en el eje Z basada en la entrada del controlador
+        Quaternion rotacionZ = Quaternion.Euler(0, 0, -controller.InputX * 450);
+
+        // Aplicar la rotación al objeto
+        Centro.rotation = rotacionZ;
     }
-
-
-    
-    
 }
