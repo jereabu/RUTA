@@ -5,11 +5,12 @@ using UnityEngine;
 public class IndicadorEstacionar : MonoBehaviour
 {
     bool isRight = true;
-    public float Speed;
+    public float SpeedUp;
+    public float SpeedDown;
     public float ValorMax;
     public float ValorMin;
     private float timer = 0f;
-    public float movementDuration = 5f;
+    public float movementDuration;
 
     // Start is called before the first frame update
     void Start()
@@ -34,12 +35,12 @@ public class IndicadorEstacionar : MonoBehaviour
 
             if (isRight == false)
             {
-                transform.Translate(0, -Speed, 0);
+                transform.Translate(0, 0, -SpeedDown);
             }
 
             if (isRight == true)
             {
-                transform.Translate(0, Speed, 0);
+                transform.Translate(0, 0, SpeedUp);
             }
 
             
