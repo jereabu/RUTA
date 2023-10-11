@@ -120,7 +120,7 @@ public class Controller : MonoBehaviour
         {
             rb.transform.Translate(000, 10, 000);
         }
-        if (Input.GetKeyUp(KeyCode.UpArrow) && !guinoIzq && !Balizas)
+        if (Input.GetKeyUp(KeyCode.RightArrow) && !guinoIzq && !Balizas)
         {
             if (guinoDer == true)
             {
@@ -134,7 +134,7 @@ public class Controller : MonoBehaviour
             }
             Debug.Log("arriba");
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow) && !guinoDer && !Balizas)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && !guinoDer && !Balizas)
         {
             if (guinoIzq == true)
             {
@@ -148,7 +148,7 @@ public class Controller : MonoBehaviour
             }
             Debug.Log("abajo");
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && !guinoDer && !guinoIzq)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !guinoDer && !guinoIzq)
         {
             if (Balizas == true)
             {

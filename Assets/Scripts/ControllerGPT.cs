@@ -52,10 +52,7 @@ public class ControllerGPT : MonoBehaviour
     private void Update()
     {
 
-        foreach (var wheel in wheels)
-        {
-            wheel.steerAngle = InputX * -steerPower;
-        }
+       
         if (LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0))
         {
             LogitechGSDK.DIJOYSTATE2ENGINES rec;
