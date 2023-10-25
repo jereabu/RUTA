@@ -18,12 +18,12 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Paleta general
-    second: {fileID: 2800000, guid: a1deaf1cf6ebb4e46bcb4c365767c587, type: 3}
+    second: {fileID: 2800000, guid: 9dab365a41585714c9a6fedebe9a33cd, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: pare
-    second: {fileID: 2800000, guid: 4d6bd276ecd5ac748839071a98e046c3, type: 3}
+    second: {fileID: 2800000, guid: 663073d83bd447641a36528d0f5dc95f, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
