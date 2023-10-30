@@ -69,26 +69,7 @@ public class Controller : MonoBehaviour
     private void Update()
     {
         
-        /*if (Input.GetKeyDown(KeyCode.T) && !girada)
-        {
-            camera.transform.rotation = Quaternion.Euler(0f, 120f, 0f);
-            Debug.Log("Alguien mas me esta modificando");
-            girada = true;
-        }
-        if (Input.GetKeyDown(KeyCode.T) && girada)
-        {
-            camera.transform.rotation = Quaternion.Euler(0f, -120f, 0f);
-            girada = false;
-        }*/
-        // Rotar el volante, no el auto
-        //if (InputX > 0.03 || InputX < -0.03)
-        //{
-        //    Volante.transform.Rotate(0, 0, -InputX);
-        //}
-        /* else
-         {
-             Volante.transform.localRotation = _initialOrientation;
-         }*/
+
         if (LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0))
         {
             LogitechGSDK.DIJOYSTATE2ENGINES rec;
@@ -282,7 +263,7 @@ public class Controller : MonoBehaviour
                 }
                 if (cambio == 2)// Cambio 2
                 {
-                if (acelerador > 0.5f || wheel.motorTorque == 0 && freno <= 0.4f)
+                if (acelerador > 0.1f || wheel.motorTorque == 0 && freno <= 0.4f)
                 {
                     wheel.motorTorque = (acelerador * motorPower2);
                 }
@@ -290,7 +271,7 @@ public class Controller : MonoBehaviour
                 }
                 if (cambio == 3)// Cambio 3
                 {
-                if (acelerador > 0.5f || wheel.motorTorque == 0 && freno <= 0.4f)
+                if (acelerador > 0.1f || wheel.motorTorque == 0 && freno <= 0.4f)
                 {
                     wheel.motorTorque = (acelerador * motorPower3);
                 }
@@ -298,7 +279,7 @@ public class Controller : MonoBehaviour
                 }
                 if (cambio == 4) // Cambio 4
                 {
-                    if (acelerador > 0.5f || wheel.motorTorque == 0 && freno <= 0.4f)
+                    if (acelerador > 0.1f || wheel.motorTorque == 0 && freno <= 0.4f)
                         {
                             wheel.motorTorque = (acelerador * motorPower4);
                         }
