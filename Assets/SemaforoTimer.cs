@@ -8,7 +8,7 @@ public class SemaforoTimer : MonoBehaviour
 
     public GameObject RedL;
     public GameObject GreenL;
-
+    public bool StartsGreen = false;
     public GameObject Trigg;
     public float RTime;
     [SerializeField] private float CRTime;
