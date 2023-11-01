@@ -15,8 +15,19 @@ public class SemaforoTimer : MonoBehaviour
     private bool Translated = false;
     void Start()
     {
+        if (StartsGreen)
+        {
+            RedL.SetActive(false);
+            Trigg.transform.Translate(0, -10, 0);
+            Translated = true;
+        }
+        else
+        {
+            GreenL.SetActive(false);
+        }
+
         CRTime = RTime;
-        GreenL.SetActive(false);
+        
     }
 
     // Update is called once per frame

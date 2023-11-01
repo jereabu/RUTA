@@ -5,7 +5,7 @@ using UnityEngine;
 public class DayNight : MonoBehaviour
 {
     Vector3 rot = Vector3.zero;
-    float DayTime = 2;
+    [SerializeField] float DayTime = 2;
     
     // Start is called before the first frame update
     void Start()
