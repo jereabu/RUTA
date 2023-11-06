@@ -10,9 +10,12 @@ public class CarEngine : MonoBehaviour {
     public WheelCollider wheelFR;
     public float maxMotorTorque = 80f;
     public float currentSpeed;
-    public float maxSpeed = 100f;
+    public float maxSpeed = 40f;
     bool WarnCol = false;
     public Rigidbody Rigido;
+    public float InmunityTime;
+    bool Inmune;
+    float CurrentTime;
 
     private List<Transform> nodes;
     private int currectNode = 0;
@@ -20,7 +23,7 @@ public class CarEngine : MonoBehaviour {
     private void Start () {
         Transform[] pathTransforms = path.GetComponentsInChildren<Transform>();
         nodes = new List<Transform>();
-
+        //CurrentTime = InmunityTime;
         Rigido = GetComponent<Rigidbody>();
 
         for (int i = 0; i < pathTransforms.Length; i++) {
@@ -44,6 +47,19 @@ public class CarEngine : MonoBehaviour {
             
             wheelFL.motorTorque = 0;
             wheelFR.motorTorque = 0;
+        }
+
+        if(CurrentTime > 0)
+        {
+            CurrentTime -= Time.deltaTime;
+            if (!Inmune)
+            {
+                Inmune = true;
+            }
+        }
+        else if(CurrentTime <= 0)
+        {
+            Inmune = false;
         }
         
     }
@@ -77,11 +93,11 @@ public class CarEngine : MonoBehaviour {
     private void CheckWaypointDistance() {
         if (Vector3.Distance(transform.position, nodes[currectNode].position) < 5f)
         {
-            maxSpeed = 30f;
+            maxSpeed = 20f;
         }
         else
         {
-            maxSpeed = 100f;
+            maxSpeed = 40f;
         }
 
         if (Vector3.Distance(transform.position, nodes[currectNode].position) < 0.5f) {
@@ -95,7 +111,7 @@ public class CarEngine : MonoBehaviour {
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag("Stopper"))
+        if (col.gameObject.CompareTag("Stopper") && !Inmune)
         {
             WarnCol = true;
         }
@@ -103,9 +119,10 @@ public class CarEngine : MonoBehaviour {
 
     void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.CompareTag("Stopper"))
+        if (col.gameObject.CompareTag("Stopper") && !Inmune)
         {
             WarnCol = false;
+            CurrentTime = InmunityTime;
         }
     }
 }

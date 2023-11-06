@@ -560,6 +560,10 @@ PrefabInstance:
       propertyPath: path
       value: 
       objectReference: {fileID: 4538190010588789764}
+    - target: {fileID: 8687061503006176769, guid: 73387ede13e1a904aa66e99d1c3c5847, type: 3}
+      propertyPath: maxSteerAngle
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 8687061503006176772, guid: 73387ede13e1a904aa66e99d1c3c5847, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -767,6 +771,10 @@ PrefabInstance:
     - target: {fileID: 1856020549716026241, guid: 9398907c09b5bef49bc9164ca2d103f5, type: 3}
       propertyPath: m_Name
       value: SemaforoReplacement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856020549716026241, guid: 9398907c09b5bef49bc9164ca2d103f5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5040662782507151101, guid: 9398907c09b5bef49bc9164ca2d103f5, type: 3}
       propertyPath: m_RootOrder
