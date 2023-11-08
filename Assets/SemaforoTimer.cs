@@ -8,9 +8,10 @@ public class SemaforoTimer : MonoBehaviour
 
     public GameObject RedL;
     public GameObject GreenL;
+    public GameObject YellowL;
     public bool StartsGreen = false;
     public GameObject Trigg;
-    public float RTime;
+    private float RTime = 25;
     [SerializeField] private float CRTime;
     private bool Translated = false;
     void Start()
@@ -25,7 +26,7 @@ public class SemaforoTimer : MonoBehaviour
         {
             GreenL.SetActive(false);
         }
-
+        YellowL.SetActive(false);
         CRTime = RTime;
         
     }
@@ -33,12 +34,13 @@ public class SemaforoTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(CRTime > 0)
+        if (CRTime > 0)
         {
             CRTime -= Time.deltaTime;
         }
-        if(CRTime <= 0)
+        else if (CRTime <= 25)
         {
+            YellowL.SetActive(false);
             if (Translated)
             {
                 Trigg.transform.Translate(0, 10, 0);
@@ -53,7 +55,7 @@ public class SemaforoTimer : MonoBehaviour
                 GreenL.SetActive(true);
                 RedL.SetActive(false);
             }
-            
+
 
             /*if (Trigg.activeInHierarchy == true)
             {
@@ -63,9 +65,17 @@ public class SemaforoTimer : MonoBehaviour
             {
                 Trigg.SetActive(true);
             }*/
-            
-            
+
+
             CRTime = RTime;
+        }
+        if (CRTime <= 2 && CRTime > 0 && RedL.activeInHierarchy)
+        {
+            YellowL.SetActive(true);
+        }
+        else
+        {
+            YellowL.SetActive(false);
         }
     }
 }

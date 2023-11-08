@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 
 public class CarEngine : MonoBehaviour {
 
@@ -64,8 +65,14 @@ public class CarEngine : MonoBehaviour {
         
     }
 
-    private void ApplySteer() {
+    private void ApplySteer() 
+    {
         Vector3 relativeVector = transform.InverseTransformPoint(nodes[currectNode].position);
+        //Vector3 newtry = nodes[currectNode].position - transform.position;
+        //Debug.DrawRay(wheelFL.transform.position, newtry, Color.green);
+        //Debug.DrawRay(wheelFR.transform.position, newtry, Color.green);
+        //Debug.DrawLine(wheelFL.transform.position, relativeVector - wheelFL.transform.position, Color.green);
+        //Debug.DrawLine(wheelFR.transform.position, relativeVector - wheelFR.transform.position, Color.green);
         float newSteer = (relativeVector.x / relativeVector.magnitude) * maxSteerAngle;
         wheelFL.steerAngle = newSteer;
         wheelFR.steerAngle = newSteer;
