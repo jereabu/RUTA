@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
+
+
 public class Estacionar : MonoBehaviour
 {
 
@@ -19,6 +21,10 @@ public class Estacionar : MonoBehaviour
     private int Cambio = 0;
     bool Completado;
     public GameObject UI;
+    
+    
+    
+    
    
 
     // Start is called before the first frame update
@@ -45,7 +51,7 @@ public class Estacionar : MonoBehaviour
         {
    
             UI.SetActive(true);    
-            Debug.Log("VamoMessi");
+            Debug.Log("Estacionado");
         }
     }
 
@@ -58,7 +64,7 @@ public class Estacionar : MonoBehaviour
             Debug.Log("DENTRO");
         }
 
-        //CheckIfAllWheelsInside(); 
+        
     }
     private void OnTriggerExit(Collider other)
     {
@@ -68,7 +74,7 @@ public class Estacionar : MonoBehaviour
             Debug.Log("FUERA.");
         }
 
-        //CheckIfAllWheelsInside();
+      
     }
    
 }
