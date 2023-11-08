@@ -15,12 +15,12 @@ public class Controller : MonoBehaviour
     [SerializeField] float motorPower2 = 75;
     [SerializeField] float motorPower3 = 120;
     [SerializeField] float motorPower4 = 160;
-    [SerializeField] float motorPower5 = 200;
+    [SerializeField] float motorPower5 = 160;
     public Rigidbody rb;
     public AudioSource Audio;
     public GameObject CenterOfMass;
     public float motorSpeed;
-    static public int cambio = 1;
+    public int cambio = 1;
     public bool cambiable;
     public bool frenable;
     public bool cambiazo;
@@ -39,6 +39,7 @@ public class Controller : MonoBehaviour
     public AudioClip BalizasSFX;
     public Quaternion _initialOrientation;
     public bool girada = false;
+    public float velocityRB;
    
    
   /*  public Titilar guinoDerReal;
@@ -49,7 +50,6 @@ public class Controller : MonoBehaviour
 
     private void Start()
     {
-        
         // PARA LA DUREZA DEL CONTROL ES EL MODIFICADOR DE VOLANTE DAMPER FORCE!!!!!!! IMPORTANTE
         rb = GetComponent<Rigidbody>();
         //Audio = GetComponent<AudioSource>();
@@ -61,20 +61,16 @@ public class Controller : MonoBehaviour
         guinoIzqImage.color = Color.grey;
         BalizasImage.color = Color.grey;
         _initialOrientation = transform.localRotation;
-       // camera = GameObject.FindGameObjectWithTag("cam");
-
-
-
     }
     private void Update()
     {
-        
 
+        velocityRB = rb.velocity.magnitude;
+        
         if (LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0))
         {
             LogitechGSDK.DIJOYSTATE2ENGINES rec;
             rec = LogitechGSDK.LogiGetStateUnity(0);
-            //C
             InputX = rec.lX / 32768f; // 1 0 -1
             
             embrague = rec.lY;
@@ -92,9 +88,6 @@ public class Controller : MonoBehaviour
             acelerador += 32768f;
             acelerador /= 65535f;
             acelerador = 1 - acelerador;
-            //Debug.Log(acelerador);
-
-  
         }
         //tpear arriba
         if (Input.GetKeyDown(KeyCode.Space))
@@ -107,7 +100,6 @@ public class Controller : MonoBehaviour
             {
                 Audio.Stop();
                 guinoDer = false;
-               
             }
             else
             {
@@ -121,7 +113,6 @@ public class Controller : MonoBehaviour
             {
                 Audio.Stop();
                 guinoIzq = false;
-
             }
             else
             {
@@ -158,15 +149,12 @@ public class Controller : MonoBehaviour
         }
         if (guinoDer == true)
         {
-            
-
             if (!Audio.isPlaying)
                 Audio.PlayOneShot(BalizasSFX);
             guinoDerFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 0.5f));
         }
         if (guinoDer == false)
-        {
-            
+        { 
             guinoDerFoto.color = colorInicio;
         }
         if (guinoIzq == true)
@@ -178,7 +166,6 @@ public class Controller : MonoBehaviour
         }
         if (guinoIzq == false)
         {
-            
             guinoIzqFoto.color = colorInicio;
         }
         if (Balizas == true)
@@ -186,12 +173,9 @@ public class Controller : MonoBehaviour
             if (!Audio.isPlaying)
                 Audio.PlayOneShot(BalizasSFX);
             BalizasFoto.color = Color.Lerp(colorInicio, colorFinal, Mathf.PingPong(Time.time * 1, 0.5f));
-            
-
         }
         if (Balizas == false)
         {
-            
             BalizasFoto.color = colorInicio;
         }
     }
@@ -199,11 +183,6 @@ public class Controller : MonoBehaviour
 
     void FixedUpdate()
     {
-        
-        if (acelerador > 0 && cambio >= 0)
-        {
-     
-        }
         //para poner el auto en punto muerto mientras el auto esta andando, y poder hacer los cambios
         // frenable = freno de mano?
         if (cambio < 5 && embrague > 0 && acelerador <= 0)
@@ -222,12 +201,9 @@ public class Controller : MonoBehaviour
         if (Input.GetKey(KeyCode.Q) && cambiable && cambio >= 0 && cambiazo)
         {
             rb.constraints = RigidbodyConstraints.None;
-            
             cambio -= 1;
             cambiazo = false;
             Debug.Log("Arrancado");
-
-
         }
         // Hacer que funcionen los cambios
         if (/*Input.GetKey(KeyCode.W) == false && Input.GetKeyDown(KeyCode.E) && cambiable */ cambiazo)
@@ -235,7 +211,6 @@ public class Controller : MonoBehaviour
             cambio += 1;
             cambiazo = false;
             Debug.Log("cambio " + cambio);
-
         }
 
         else if (Input.GetKey(KeyCode.W) == false && frenable && Input.GetKey(KeyCode.R))
@@ -255,42 +230,41 @@ public class Controller : MonoBehaviour
         {
                 if (cambio == 1)// Cambio 1
                 {
-                if (acelerador > 0.1f || wheel.motorTorque == 0 && freno <= 0.4f)
-                {
-                    wheel.motorTorque = (acelerador * motorPower1);
-                }
+                    if (acelerador > 0.1f || wheel.motorTorque == 0 && freno <= 0.4f)
+                    {
+                        wheel.motorTorque = acelerador * motorPower1;
+                    }
                 //Debug.Log("Cambio 1");
                 }
                 if (cambio == 2)// Cambio 2
                 {
-                if (acelerador > 0.1f || wheel.motorTorque == 0 && freno <= 0.4f)
-                {
-                    wheel.motorTorque = (acelerador * motorPower2);
-                }
+                    if (acelerador > 0.1f || wheel.motorTorque == 0 && freno <= 0.4f)
+                    {
+                        wheel.motorTorque = acelerador * motorPower2;
+                    }
                // Debug.Log("Cambio 2");
                 }
                 if (cambio == 3)// Cambio 3
                 {
-                if (acelerador > 0.1f || wheel.motorTorque == 0 && freno <= 0.4f)
-                {
-                    wheel.motorTorque = (acelerador * motorPower3);
-                }
+                    if (acelerador > 0.1f || wheel.motorTorque == 0 && freno <= 0.4f)
+                    {
+                        wheel.motorTorque = acelerador * motorPower3;
+                    }
               //  Debug.Log("Cambio 3");
                 }
                 if (cambio == 4) // Cambio 4
                 {
                     if (acelerador > 0.1f || wheel.motorTorque == 0 && freno <= 0.4f)
-                        {
-                            wheel.motorTorque = (acelerador * motorPower4);
-                        }
+                    {
+                        wheel.motorTorque = acelerador * motorPower4;
+                    }
               //  Debug.Log("Cambio 4");
                 }
                 if (cambio == 5) // Cambio 5
                 {
-                    //acelerador += 1;
-                    if(acelerador > 0.5f || wheel.motorTorque == 0 && freno <= 0.4f)
+                    if(acelerador > 0.1f || wheel.motorTorque == 0 && freno <= 0.4f)
                     {
-                        wheel.motorTorque = (acelerador * motorPower5);
+                        wheel.motorTorque = acelerador * motorPower5;
                     }
                     
                  //   Debug.Log("Cambio 5");
@@ -298,20 +272,17 @@ public class Controller : MonoBehaviour
                 }
                 if (cambio == 0) //Reversa
                 {
-                    wheel.motorTorque = acelerador * motorPower0;
-                    Debug.Log("Reversa");
-                    rb.constraints = RigidbodyConstraints.None;
+                wheel.motorTorque = acelerador * motorPower0;
+                rb.constraints = RigidbodyConstraints.None;
 
             }
                 if (cambio == -1) //Punto Muerto o freno de mano
                 {
-                    wheel.motorTorque = acelerador * 0;
+                wheel.motorTorque = acelerador * 0;
                 acelerador = 0;
                 freno = 0;
-                    //Debug.Log("Punto Muerto");
-                    //rb.constraints = RigidbodyConstraints.FreezePosition; 
                 }
-            //Debug.Log(wheel.motorTorque);
+
             if (freno > 0.001f)
             {
                 wheel.motorTorque = wheel.motorTorque / 3;
@@ -331,15 +302,11 @@ public class Controller : MonoBehaviour
         {
             if (i < 2)
             {
-                wheels[i].steerAngle = (InputX * steerPower) / 2;
-
-                //Debug.Log(Input.GetAxis("Horizontal"));
-
-
+                wheels[i].steerAngle = InputX * steerPower / 2;
                 if (FrontWheels[i].transform.localRotation.y < 30 || FrontWheels[i].transform.localRotation.y > -30)
                 {
                     //Hace que rote
-                    FrontWheels[i].transform.localRotation = Quaternion.Euler(0, (InputX * steerPower) / 2, 0);
+                    FrontWheels[i].transform.localRotation = Quaternion.Euler(0, InputX * steerPower / 2, 0);
                 }
 
             }

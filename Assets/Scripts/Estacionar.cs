@@ -16,8 +16,8 @@ public class Estacionar : MonoBehaviour
     
 
     //public flechitas Flechitas;
-    //public flechitas valor_cambio;
-    public Controller valor_cambio;
+    //public flechitas controller;
+    public Controller controller;
     private int Cambio = 0;
     bool Completado;
     public GameObject UI;
@@ -32,7 +32,7 @@ public class Estacionar : MonoBehaviour
 
     void Start()
     {
-        valor_cambio = FindObjectOfType<Controller>();
+        controller = FindObjectOfType<Controller>();
         UI.SetActive(false);
     }
 
@@ -40,7 +40,7 @@ public class Estacionar : MonoBehaviour
     void Update()
     {
         Debug.Log(wheelsInsideTrigger);
-        Cambio = Controller.cambio;
+        Cambio = controller.cambio;
         
 
         Debug.Log("valor cambio es: "+Cambio);
