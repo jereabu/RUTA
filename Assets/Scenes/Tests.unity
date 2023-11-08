@@ -1492,22 +1492,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 169103545, guid: 46897d3ac36e28f48acac3507a6a2c21, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.602
-      objectReference: {fileID: 0}
-    - target: {fileID: 169103545, guid: 46897d3ac36e28f48acac3507a6a2c21, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.795
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971941659, guid: 46897d3ac36e28f48acac3507a6a2c21, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.602
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971941659, guid: 46897d3ac36e28f48acac3507a6a2c21, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.215
-      objectReference: {fileID: 0}
     - target: {fileID: 2302912311745541547, guid: 46897d3ac36e28f48acac3507a6a2c21, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1552,17 +1536,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3506579299413248096, guid: 46897d3ac36e28f48acac3507a6a2c21, type: 3}
+      propertyPath: m_Name
+      value: Barrier
+      objectReference: {fileID: 0}
     - target: {fileID: 4882032051908229335, guid: 46897d3ac36e28f48acac3507a6a2c21, type: 3}
       propertyPath: m_Name
       value: Semaforo
-      objectReference: {fileID: 0}
-    - target: {fileID: 7416163462250794937, guid: 46897d3ac36e28f48acac3507a6a2c21, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.602
-      objectReference: {fileID: 0}
-    - target: {fileID: 7416163462250794937, guid: 46897d3ac36e28f48acac3507a6a2c21, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.988
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46897d3ac36e28f48acac3507a6a2c21, type: 3}
