@@ -19,6 +19,11 @@ TagManager:
   - DLVL_1
   - LVL_COM
   - HumanNPC
+  - DLVL_2
+  - Bumper
+  - Wheel
+  - cam
+  - Aro
   layers:
   - Default
   - TransparentFX
