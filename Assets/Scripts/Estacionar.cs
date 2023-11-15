@@ -39,7 +39,7 @@ public class Estacionar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(wheelsInsideTrigger);
+        Debug.Log(wheelsInsideTrigger);
         Cambio = controller.cambio;
         
 
