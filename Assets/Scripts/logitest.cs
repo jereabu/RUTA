@@ -10,11 +10,11 @@ public class logitest : MonoBehaviour
 
     [SerializeField] float steerPower;
     public float motorPower0 = -40;
-    [SerializeField] float motorPower1 = 100;
+   /* [SerializeField] float motorPower1 = 100;
     [SerializeField] float motorPower2 = 150;
     [SerializeField] float motorPower3 = 200;
     [SerializeField] float motorPower4 = 250;
-    [SerializeField] float motorPower5 = 500;
+    [SerializeField] float motorPower5 = 500;*/
     public Rigidbody rb;
     public GameObject CenterOfMass;
     public float motorSpeed;

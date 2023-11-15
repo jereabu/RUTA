@@ -10,20 +10,33 @@ public class VolanteVolver : MonoBehaviour
     Quaternion rotGoal;
     Vector3 direccion;
     [SerializeField] float inputX;
+    public GameObject player;
+    public Quaternion rotacionZ;
+
     // Update is called once per frame
     void Update()
     {
-        //Giro();
         inputX = controller.InputX;
-        Centro.eulerAngles = Vector3.forward * 450 * -controller.InputX;
+        //QuaternionRotation();
+        LocalEulerRotation();
+
     }
 
-
-    void Giro()
+    void QuaternionRotation()
     {
-        if (controller.InputX < 0.3 || -0.3 > controller.InputX)
-            direccion = (Centro.position - transform.position).normalized;
-        rotGoal = Quaternion.LookRotation(direccion);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotGoal, Velocidad);
+        // Crear una rotación en el eje Z basada en la entrada del controlador
+        rotacionZ = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -controller.InputX * 450);
+
+        // Aplicar la rotación al objeto
+        Centro.rotation = rotacionZ;
+    }
+
+    void LocalEulerRotation()
+    {
+        // Crear una rotación en el eje Z basada en la entrada del controlador
+        //rotacionZ = Quaternion.Euler(0, 0, -controller.InputX * 450);
+
+        // Aplicar la rotación al objeto
+        Centro.localEulerAngles = new Vector3(Centro.rotation.x, Centro.rotation.y, -controller.InputX * 450);
     }
 }

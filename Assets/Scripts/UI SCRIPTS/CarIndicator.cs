@@ -25,11 +25,22 @@ void Start()
 }
 void Update()
 {
-    balizas.text = "Balizas: " + controller.Balizas;
-    guinoDer.text = "Guiño Derecho: " + controller.guinoDer;
-    guinoIzq.text = "Guiño Izquierdo: " + controller.guinoIzq;
-    Vel.text = "Velocidad: " + Mathf.Floor(controller.motorSpeed / 2f);
-    cambio.text = "Cambio: " + Controller.cambio;
+        /*if (controller.cambio == 0)
+        {
+            balizas.text = "Balizas: " + controller.Balizas;
+            guinoDer.text = "Guiño Derecho: " + controller.guinoDer;
+            guinoIzq.text = "Guiño Izquierdo: " + controller.guinoIzq;
+            Vel.text = "Velocidad: " + Mathf.Floor(controller.motorSpeed / -1f);
+            cambio.text = "Cambio: " + controller.cambio;
+        }
+        else
+        {
+            balizas.text = "Balizas: " + controller.Balizas;
+            guinoDer.text = "Guiño Derecho: " + controller.guinoDer;
+            guinoIzq.text = "Guiño Izquierdo: " + controller.guinoIzq;
+            Vel.text = "Velocidad: " + Mathf.Floor(controller.motorSpeed);
+            cambio.text = "Cambio: " + controller.cambio;
+        }*/
 }
 
 }

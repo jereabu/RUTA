@@ -3,7 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Stopper
+  - cambio
+  - Vel
+  - guinoDer
+  - balizas
+  - guinoIzq
+  - balizasFoto
+  - guinoIzqFoto
+  - guinoDerFoto
+  - MenuUI
+  - LVLS_1
+  - MODES
+  - DLVL_1
+  - LVL_COM
+  - HumanNPC
   layers:
   - Default
   - TransparentFX

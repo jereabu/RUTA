@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
+
+
 public class Estacionar : MonoBehaviour
 {
 
@@ -14,11 +16,15 @@ public class Estacionar : MonoBehaviour
     
 
     //public flechitas Flechitas;
-    //public flechitas valor_cambio;
-    public Controller valor_cambio;
+    //public flechitas controller;
+    public Controller controller;
     private int Cambio = 0;
     bool Completado;
     public GameObject UI;
+    
+    
+    
+    
    
 
     // Start is called before the first frame update
@@ -26,26 +32,26 @@ public class Estacionar : MonoBehaviour
 
     void Start()
     {
-        valor_cambio = FindObjectOfType<Controller>();
+        controller = FindObjectOfType<Controller>();
         UI.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(wheelsInsideTrigger);
-        Cambio = Controller.cambio;
+        //Debug.Log(wheelsInsideTrigger);
+        Cambio = controller.cambio;
         
 
-        Debug.Log("valor cambio es: "+Cambio);
-        Debug.Log("ruedas: " + wheelsInsideTrigger + "cambio: " + Cambio);
+        //Debug.Log("valor cambio es: "+Cambio);
+        //Debug.Log("ruedas: " + wheelsInsideTrigger + "cambio: " + Cambio);
 
         if (wheelsInsideTrigger == 4 && Cambio == -1)
 
         {
    
             UI.SetActive(true);    
-            Debug.Log("VamoMessi");
+            Debug.Log("Estacionado");
         }
     }
 
@@ -58,7 +64,7 @@ public class Estacionar : MonoBehaviour
             Debug.Log("DENTRO");
         }
 
-        //CheckIfAllWheelsInside(); 
+        
     }
     private void OnTriggerExit(Collider other)
     {
@@ -68,7 +74,7 @@ public class Estacionar : MonoBehaviour
             Debug.Log("FUERA.");
         }
 
-        //CheckIfAllWheelsInside();
+      
     }
    
 }
