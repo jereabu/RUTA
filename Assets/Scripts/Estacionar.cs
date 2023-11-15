@@ -43,8 +43,8 @@ public class Estacionar : MonoBehaviour
         Cambio = controller.cambio;
         
 
-        //Debug.Log("valor cambio es: "+Cambio);
-        //Debug.Log("ruedas: " + wheelsInsideTrigger + "cambio: " + Cambio);
+        Debug.Log("valor cambio es: "+Cambio);
+        Debug.Log("ruedas: " + wheelsInsideTrigger + "cambio: " + Cambio);
 
         if (wheelsInsideTrigger == 4 && Cambio == -1)
 
