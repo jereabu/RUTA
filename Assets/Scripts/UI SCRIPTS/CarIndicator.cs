@@ -25,7 +25,7 @@ void Start()
 }
 void Update()
 {
-        if (controller.cambio == 0)
+        /*if (controller.cambio == 0)
         {
             balizas.text = "Balizas: " + controller.Balizas;
             guinoDer.text = "Guiño Derecho: " + controller.guinoDer;
@@ -40,7 +40,7 @@ void Update()
             guinoIzq.text = "Guiño Izquierdo: " + controller.guinoIzq;
             Vel.text = "Velocidad: " + Mathf.Floor(controller.motorSpeed);
             cambio.text = "Cambio: " + controller.cambio;
-        }
+        }*/
 }
 
 }

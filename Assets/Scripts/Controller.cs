@@ -28,12 +28,12 @@ public class Controller : MonoBehaviour
     public float embrague;
     static public float acelerador;
     public float InputX;
-    public bool guinoDer;
-    public Image guinoDerFoto;
-    public bool guinoIzq;
-    public Image guinoIzqFoto;
-    public bool Balizas;
-    public Image BalizasFoto;
+    //public bool guinoDer;
+    //public Image guinoDerFoto;
+    //public bool guinoIzq;
+    //public Image guinoIzqFoto;
+    //public bool Balizas;
+    //public Image BalizasFoto;
     public Color colorInicio = Color.grey;
     public Color colorFinal = Color.white;
     public AudioClip BalizasSFX;
@@ -53,13 +53,13 @@ public class Controller : MonoBehaviour
         // PARA LA DUREZA DEL CONTROL ES EL MODIFICADOR DE VOLANTE DAMPER FORCE!!!!!!! IMPORTANTE
         rb = GetComponent<Rigidbody>();
         //Audio = GetComponent<AudioSource>();
-        Image BalizasImage = BalizasFoto.GetComponent<Image>();
+       /* Image BalizasImage = BalizasFoto.GetComponent<Image>();
         Image guinoDerImage = guinoDerFoto.GetComponent<Image>();
-        Image guinoIzqImage = guinoIzqFoto.GetComponent<Image>();
+        Image guinoIzqImage = guinoIzqFoto.GetComponent<Image>();*/
         rb.centerOfMass = CenterOfMass.transform.localPosition;
-        guinoDerImage.color = Color.grey;
+        /*guinoDerImage.color = Color.grey;
         guinoIzqImage.color = Color.grey;
-        BalizasImage.color = Color.grey;
+        BalizasImage.color = Color.grey;*/
         _initialOrientation = transform.localRotation;
     }
     private void Update()
@@ -94,7 +94,7 @@ public class Controller : MonoBehaviour
         {
             rb.transform.Translate(000, 10, 000);
         }
-        if (Input.GetKeyUp(KeyCode.RightArrow) && !guinoIzq && !Balizas)
+       /* if (Input.GetKeyUp(KeyCode.RightArrow) && !guinoIzq && !Balizas)
         {
             if (guinoDer == true)
             {
@@ -134,7 +134,7 @@ public class Controller : MonoBehaviour
                 Balizas = true;
             }
             Debug.Log("Balizas");
-        }
+        }*/
         //cambio +1
         if (!Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.E) && cambiable && cambio < 5)
         {
@@ -147,7 +147,7 @@ public class Controller : MonoBehaviour
         {
             cambiazo = false;
         }
-        if (guinoDer == true)
+       /* if (guinoDer == true)
         {
             if (!Audio.isPlaying)
                 Audio.PlayOneShot(BalizasSFX);
@@ -177,7 +177,7 @@ public class Controller : MonoBehaviour
         if (Balizas == false)
         {
             BalizasFoto.color = colorInicio;
-        }
+        }*/
     }
         
 
