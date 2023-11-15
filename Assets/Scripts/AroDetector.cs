@@ -7,40 +7,35 @@ using TMPro;
 
 public class AroDetector : MonoBehaviour
 {
-    public GameObject[] aros; 
-    private int Aro = 1;
+    public Color lineColor;
 
-    void Start()
+    [SerializeField] private List<Transform> Waypoints = new List<Transform>();
+    void OnDrawGizmos()
     {
-        
-        for (int i = 1; i < aros.Length; i++)
-        {
-            aros[i].SetActive(false);
-        }
-    }
+        Gizmos.color = lineColor;
 
-    void Update()
-    {
-        Debug.Log("El Aro activo es:" + Aro); 
-        
-        if (Aro < aros.Length)
-        {
-            aros[Aro].SetActive(true);
-        }
-     
-    }
+        Transform[] WaypointsTrfsm = GetComponentsInChildren<Transform>();
 
-    private void OnTriggerEnter(Collider other)
-    {
-        
-        if (other.CompareTag("Wheel"))
-        {
-            // Desactivar el aro actual y activar el siguiente si hay uno disponible
-            aros[Aro].SetActive(false);
-            Aro++;
+        Waypoints = new List<Transform>();
 
+        for (int i = 0; i < WaypointsTrfsm.Length; i++)
+        {
+            if (WaypointsTrfsm[i] != transform)
+            {
+                Waypoints.Add(WaypointsTrfsm[i]);
+            }
         }
-       
+
+        for (int i = 0; i < Waypoints.Count; i++)
+        {
+            Vector3 CurrentWaypoint = Waypoints[i].position;
+            Vector3 PreviousWaypoint = Vector3.zero;
+            if (i > 0)
+            {
+                PreviousWaypoint = Waypoints[i - 1].position;
+                Gizmos.DrawLine(PreviousWaypoint, CurrentWaypoint);
+            }
+        }
     }
 }
 
