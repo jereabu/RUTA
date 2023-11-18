@@ -34,6 +34,8 @@ public class Estacionar : MonoBehaviour
     {
         controller = FindObjectOfType<Controller>();
         UI.SetActive(false);
+
+       
     }
 
     // Update is called once per frame
@@ -41,7 +43,11 @@ public class Estacionar : MonoBehaviour
     {
         //Debug.Log(wheelsInsideTrigger);
         Cambio = controller.cambio;
-        
+
+        if (Input.GetKey(KeyCode.T))
+        {
+            UI.SetActive(true);
+        }
 
         Debug.Log("valor cambio es: "+Cambio);
         Debug.Log("ruedas: " + wheelsInsideTrigger + "cambio: " + Cambio);
