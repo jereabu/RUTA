@@ -11,7 +11,7 @@ public class SemaforoTimer : MonoBehaviour
     public GameObject YellowL;
     public bool StartsGreen = false;
     public GameObject Trigg;
-    private float RTime = 25;
+    [SerializeField] private float RTime = 25;
     [SerializeField] private float CRTime;
     private bool Translated = false;
     void Start()
