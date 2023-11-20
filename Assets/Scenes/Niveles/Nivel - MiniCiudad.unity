@@ -881,6 +881,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &197056629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4759004665825273643, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
+  m_PrefabInstance: {fileID: 1232398547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &197056635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197056629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f4cf4fdce2ddc439307a6035e2ace8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UI: {fileID: 2085288943444282156}
 --- !u!1001 &198015073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3386,6 +3404,10 @@ PrefabInstance:
       propertyPath: RTime
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 3506579299413248096, guid: 46897d3ac36e28f48acac3507a6a2c21, type: 3}
+      propertyPath: m_TagString
+      value: Blocked
+      objectReference: {fileID: 0}
     - target: {fileID: 3506579299413248098, guid: 46897d3ac36e28f48acac3507a6a2c21, type: 3}
       propertyPath: m_Size.x
       value: 3.3958118
@@ -3612,6 +3634,10 @@ PrefabInstance:
     - target: {fileID: 4759004665825273643, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
       propertyPath: m_Name
       value: Autito (PC PLAYER Final)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759004665825273643, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4759004665825273645, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
       propertyPath: Audio
