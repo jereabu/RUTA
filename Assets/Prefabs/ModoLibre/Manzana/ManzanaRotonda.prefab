@@ -90,7 +90,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 09fa2484d832ace429107421832bb47a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9acefcd750e4e3444ae9bd06505d9c4c, type: 2}
+      objectReference: {fileID: 2100000, guid: 0224fc4145c233644a85614a3713f26d, type: 2}
     - target: {fileID: 919132149155446097, guid: 09fa2484d832ace429107421832bb47a, type: 3}
       propertyPath: m_Name
       value: manzana rotonda
