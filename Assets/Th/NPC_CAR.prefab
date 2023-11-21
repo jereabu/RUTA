@@ -163,5 +163,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
-  speed: 0.05
-  RotationSpeed: 1
+  speed: 0.3
+  RotationSpeed: 1.5
