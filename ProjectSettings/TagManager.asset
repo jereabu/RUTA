@@ -25,6 +25,7 @@ TagManager:
   - cam
   - Aro
   - Blocked
+  - DLVL_3
   layers:
   - Default
   - TransparentFX
