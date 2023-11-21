@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MissileCar : MonoBehaviour
 {
-    public Transform path;
+    [SerializeField] private Transform path;
     [SerializeField] float speed;
     Vector3 Target;
     GameObject CameraTestEmpty;
@@ -15,9 +15,11 @@ public class MissileCar : MonoBehaviour
     private int currectNode = 0;
     void Start()
     {
+        path = GameObject.FindWithTag("Path").transform;
+
         Transform[] pathTransforms = path.GetComponentsInChildren<Transform>();
         nodes = new List<Transform>();
-
+        
         for (int i = 0; i < pathTransforms.Length; i++)
         {
             if (pathTransforms[i] != path.transform)
