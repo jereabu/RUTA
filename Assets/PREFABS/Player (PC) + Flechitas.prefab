@@ -1109,7 +1109,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4029233910979841871}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bff9a1a42325714a8fd6f53d0fda0f4, type: 3}
   m_Name: 
@@ -1133,26 +1133,19 @@ MonoBehaviour:
   Audio: {fileID: 0}
   CenterOfMass: {fileID: 4679330845576785749, guid: 954523ab60e9ed449b8c6ec44e82639e, type: 3}
   motorSpeed: 0
+  cambio: 1
   cambiable: 0
   frenable: 0
   cambiazo: 0
   freno: 0
   embrague: 0
   InputX: 0
-  guinoDer: 0
-  guinoDerFoto: {fileID: 0}
-  guinoIzq: 0
-  guinoIzqFoto: {fileID: 0}
-  Balizas: 0
-  BalizasFoto: {fileID: 0}
   colorInicio: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   colorFinal: {r: 1, g: 1, b: 1, a: 1}
   BalizasSFX: {fileID: 8300000, guid: 8043ba034d5dc5e4abdbe55c4e307b28, type: 3}
-  Volante: {fileID: 0}
   _initialOrientation: {x: 0, y: 0, z: 0, w: 0}
-  guinoDerReal: {fileID: 0}
-  guinoIzqReal: {fileID: 0}
-  BalizasReal: {fileID: 0}
+  girada: 0
+  velocityRB: 0
 --- !u!114 &4029233910979841869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1298,6 +1291,7 @@ MonoBehaviour:
   frenable: 0
   cambiazo: 0
   guinoDer: 0
+  controller: {fileID: 0}
   guinoIzq: 0
   Balizas: 0
 --- !u!1 &4029233911287598453

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1283,6 +1283,7 @@ MonoBehaviour:
   frenable: 0
   cambiazo: 0
   guinoDer: 0
+  controller: {fileID: 0}
   guinoIzq: 0
   Balizas: 0
 --- !u!4 &588054410 stripped
@@ -1907,7 +1908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4029233910979841858, guid: fb9d612044fe3734dac4a4125a72d8c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -500.41
+      value: -496.46
       objectReference: {fileID: 0}
     - target: {fileID: 4029233910979841858, guid: fb9d612044fe3734dac4a4125a72d8c9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1915,7 +1916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4029233910979841858, guid: fb9d612044fe3734dac4a4125a72d8c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 305.16
+      value: 309.25
       objectReference: {fileID: 0}
     - target: {fileID: 4029233910979841858, guid: fb9d612044fe3734dac4a4125a72d8c9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1955,7 +1956,7 @@ PrefabInstance:
       objectReference: {fileID: 639738359}
     - target: {fileID: 4029233910979841870, guid: fb9d612044fe3734dac4a4125a72d8c9, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4029233910979841870, guid: fb9d612044fe3734dac4a4125a72d8c9, type: 3}
       propertyPath: BalizasFoto
@@ -2059,7 +2060,7 @@ PrefabInstance:
       objectReference: {fileID: 1699209575}
     - target: {fileID: 8582423245929439554, guid: fb9d612044fe3734dac4a4125a72d8c9, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8872002333056653501, guid: fb9d612044fe3734dac4a4125a72d8c9, type: 3}
       propertyPath: m_CastShadows
@@ -3415,10 +3416,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Autito (PC PLAYER Final)
       objectReference: {fileID: 0}
+    - target: {fileID: 4759004665825273643, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4759004665825273645, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
       propertyPath: Audio
       value: 
       objectReference: {fileID: 3467660033070412228, guid: 593558b3f3dc9c24c8c1be4df1dece49, type: 3}
+    - target: {fileID: 4759004665825273645, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5278413565349428625, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3481,6 +3490,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
+--- !u!1 &1232398548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4759004665825273643, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
+  m_PrefabInstance: {fileID: 1232398547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1232398549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1057746134403114082, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
+  m_PrefabInstance: {fileID: 1232398547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1232398550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1057746134865431650, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
+  m_PrefabInstance: {fileID: 1232398547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1232398551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1057746133846779861, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
+  m_PrefabInstance: {fileID: 1232398547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!146 &1232398552 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 1057746135108302625, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
+  m_PrefabInstance: {fileID: 1232398547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!146 &1232398553 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 1057746134924752120, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
+  m_PrefabInstance: {fileID: 1232398547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!146 &1232398554 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 1057746133165784826, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
+  m_PrefabInstance: {fileID: 1232398547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!146 &1232398555 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 1057746134465966434, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
+  m_PrefabInstance: {fileID: 1232398547}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1252197079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3717,6 +3766,8 @@ MonoBehaviour:
   MODES: []
   LVLS_1: []
   DLVL_1: []
+  DLVL_2: []
+  DLVL_3: []
   LVL_COM: []
 --- !u!224 &1328382608
 RectTransform:
@@ -4990,6 +5041,7 @@ MonoBehaviour:
   frenable: 0
   cambiazo: 0
   guinoDer: 0
+  controller: {fileID: 0}
   guinoIzq: 0
   Balizas: 0
 --- !u!114 &1699209585 stripped
@@ -4998,7 +5050,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 808036367}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128171613}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bff9a1a42325714a8fd6f53d0fda0f4, type: 3}
   m_Name: 
@@ -6004,6 +6056,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 337005665739302462, guid: 4ed6794b95da71b4b8057daa0e917bee, type: 3}
   m_PrefabInstance: {fileID: 1224627471}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2135098191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232398548}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba20faaedfae2d841888d0bd71f908dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheels:
+  - {fileID: 1232398555}
+  - {fileID: 1232398554}
+  - {fileID: 1232398553}
+  - {fileID: 1232398552}
+  FrontWheels:
+  - {fileID: 1232398551}
+  - {fileID: 1232398550}
+  steerPower: 100
+  motorPower0: -50
+  motorPower1: 30
+  motorPower2: 75
+  motorPower3: 120
+  motorPower4: 150
+  motorPower5: 250
+  rb: {fileID: 0}
+  CenterOfMass: {fileID: 1232398549}
+  motorSpeed: 0
+  cambio: 1
+  cambiable: 0
+  frenable: 0
+  cambiazo: 0
+  guinoDer: 0
+  controller: {fileID: 0}
+  guinoIzq: 0
+  Balizas: 0
 --- !u!1 &2137236029
 GameObject:
   m_ObjectHideFlags: 0
@@ -7438,6 +7528,10 @@ PrefabInstance:
       propertyPath: UI
       value: 
       objectReference: {fileID: 2085288943444282156}
+    - target: {fileID: 7969010902890865739, guid: 851a3057b6c7bba499fad30fadd23bd4, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 1699209585}
     - target: {fileID: 7969010902890865739, guid: 851a3057b6c7bba499fad30fadd23bd4, type: 3}
       propertyPath: valor_cambio
       value: 

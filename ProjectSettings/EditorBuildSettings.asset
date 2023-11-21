@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Niveles/Nivel - Estacionar.unity
     guid: 4617d83318568b246ba6a2e0086c37b9
+  - enabled: 1
+    path: Assets/Scenes/Niveles/Nivel -MiniCiudad.unity
+    guid: a69c973655cfe224790123c3dfc56df8
+  - enabled: 1
+    path: Assets/Scenes/Niveles/Nivel - Conos.unity
+    guid: abf700789901485429dbd4fea576c4fc
+  - enabled: 1
+    path: Assets/Scenes/Niveles/Nivel - MiniModoLibre.unity
+    guid: f12b7b403f0895147ac6de9ecff56bff
   m_configObjects: {}
