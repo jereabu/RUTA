@@ -69,7 +69,7 @@ public class SemaforoTimer : MonoBehaviour
 
             CRTime = RTime;
         }
-        if (CRTime <= 2 && CRTime > 0 && RedL.activeInHierarchy)
+        if (CRTime <= 3 && CRTime > 0 && RedL.activeInHierarchy || CRTime <= 3 && CRTime > 0 && GreenL.activeInHierarchy)
         {
             YellowL.SetActive(true);
         }
