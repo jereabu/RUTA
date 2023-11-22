@@ -1170,7 +1170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2508974876691779062, guid: d1dc2e34b31d5a94eb3754149caa8272, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Nivel - MiniModoLibre
+      value: Nivel -MiniCiudad
       objectReference: {fileID: 0}
     - target: {fileID: 2508974876691779062, guid: d1dc2e34b31d5a94eb3754149caa8272, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
