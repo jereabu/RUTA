@@ -26,7 +26,12 @@ void Update()
         {
 
             Vel.text = "Velocidad: " + Mathf.Floor(controller.motorSpeed / -1f);
-            cambio.text = "Cambio: " + controller.cambio;
+            cambio.text = "Cambio: " + "Reversa";
+        }
+        else if(controller.cambio == -1)
+        {
+            Vel.text = "Velocidad: " + Mathf.Floor(controller.motorSpeed);
+            cambio.text = "Cambio: " + "Punto Muerto";
         }
         else
         {

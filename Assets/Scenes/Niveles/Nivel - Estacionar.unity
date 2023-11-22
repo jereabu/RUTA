@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3428,6 +3428,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4759004665825273645, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
+      propertyPath: motorPower0
+      value: -30
+      objectReference: {fileID: 0}
     - target: {fileID: 5278413565349428625, guid: a9b5b68b510fc1b46958d0e8347414ed, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3981,7 +3985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5364045893385379759, guid: d3fb7b27ab654704696adeb10c97a596, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8160258464509780059, guid: d3fb7b27ab654704696adeb10c97a596, type: 3}
       propertyPath: m_IsActive
@@ -4719,9 +4723,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1432301980}
     m_Modifications:
+    - target: {fileID: 1412993288345788102, guid: d9574aa933d13864da582cacab8c6cbe, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -19.419
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412993288345788102, guid: d9574aa933d13864da582cacab8c6cbe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -34.146637
+      objectReference: {fileID: 0}
     - target: {fileID: 1412993288359105229, guid: d9574aa933d13864da582cacab8c6cbe, type: 3}
       propertyPath: m_text
       value: 'Cambio:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412993288359105229, guid: d9574aa933d13864da582cacab8c6cbe, type: 3}
+      propertyPath: m_margin.z
+      value: -134.06003
       objectReference: {fileID: 0}
     - target: {fileID: 1412993288359105230, guid: d9574aa933d13864da582cacab8c6cbe, type: 3}
       propertyPath: m_Pivot.x
@@ -4753,7 +4769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1412993288359105230, guid: d9574aa933d13864da582cacab8c6cbe, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 157.7439
+      value: 317.7024
       objectReference: {fileID: 0}
     - target: {fileID: 1412993288359105230, guid: d9574aa933d13864da582cacab8c6cbe, type: 3}
       propertyPath: m_SizeDelta.y
@@ -4801,7 +4817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1412993288359105230, guid: d9574aa933d13864da582cacab8c6cbe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -550
+      value: -494.01447
       objectReference: {fileID: 0}
     - target: {fileID: 1412993288359105230, guid: d9574aa933d13864da582cacab8c6cbe, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5979,7 +5995,7 @@ MeshCollider:
   m_GameObject: {fileID: 2040874271}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 0
@@ -7823,8 +7839,16 @@ PrefabInstance:
       value: EstacionarTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 7969010902890865738, guid: 851a3057b6c7bba499fad30fadd23bd4, type: 3}
+      propertyPath: m_Size.x
+      value: 3.131195
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969010902890865738, guid: 851a3057b6c7bba499fad30fadd23bd4, type: 3}
       propertyPath: m_Size.z
       value: 7.7843018
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969010902890865738, guid: 851a3057b6c7bba499fad30fadd23bd4, type: 3}
+      propertyPath: m_Center.x
+      value: 0.065597534
       objectReference: {fileID: 0}
     - target: {fileID: 7969010902890865738, guid: 851a3057b6c7bba499fad30fadd23bd4, type: 3}
       propertyPath: m_Center.z

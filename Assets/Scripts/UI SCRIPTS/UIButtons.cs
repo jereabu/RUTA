@@ -79,6 +79,7 @@ public class UIButtons : MonoBehaviour
         {
             DLVL_1[i].SetActive(false);
         }
+
     }
 
     public void LoadGame(string Scene)
@@ -104,7 +105,15 @@ public class UIButtons : MonoBehaviour
         {
             DLVL_1[i].SetActive(false);
         }
-     
+        for (int i = 0; i < DLVL_2.Length; i++)
+        {
+            DLVL_2[i].SetActive(false);
+        }
+        for (int i = 0; i < DLVL_3.Length; i++)
+        {
+            DLVL_3[i].SetActive(false);
+        }
+
     }
 
     public void OpenLevelSelector(bool state)
@@ -124,9 +133,18 @@ public class UIButtons : MonoBehaviour
         for (int i = 0; i < DLVL_1.Length; i++)
         {
             DLVL_1[i].SetActive(false);
+
         }
-       
-       
+        for (int i = 0; i < DLVL_2.Length; i++)
+        {
+            DLVL_2[i].SetActive(false);
+        }
+        for (int i = 0; i < DLVL_3.Length; i++)
+        {
+            DLVL_3[i].SetActive(false);
+        }
+
+
     }
 
     public void OpenDescriptionNivel1Selector(bool state)
@@ -241,6 +259,14 @@ public class UIButtons : MonoBehaviour
         for (int i = 0; i < LVL_COM.Length; i++)
         {
             LVL_COM[i].SetActive(!state);
+        }
+        for (int i = 0; i < DLVL_2.Length; i++)
+        {
+            DLVL_2[i].SetActive(false);
+        }
+        for (int i = 0; i < DLVL_3.Length; i++)
+        {
+            DLVL_3[i].SetActive(false);
         }
 
     }

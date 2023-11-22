@@ -10,7 +10,7 @@ public class Controller : MonoBehaviour
     public GameObject[] FrontWheels;
     logitest logitest;
     [SerializeField] float steerPower;
-    public float motorPower0 = -40;
+    public float motorPower0 = -30;
     [SerializeField] float motorPower1 = 30;
     [SerializeField] float motorPower2 = 75;
     [SerializeField] float motorPower3 = 120;
