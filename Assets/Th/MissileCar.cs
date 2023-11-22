@@ -93,7 +93,7 @@ public class MissileCar : MonoBehaviour
             maxSpeed = 40f;
         }*/
 
-        if (Vector3.Distance(transform.position, nodes[currectNode].position) < 0.75f)
+        if (Vector3.Distance(transform.position, nodes[currectNode].position) < 1)
         {
             if (currectNode == nodes.Count - 1)
             {
