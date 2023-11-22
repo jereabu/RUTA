@@ -21,7 +21,10 @@ public class flechitas : MonoBehaviour
     public bool frenable;
     public bool cambiazo;
     public bool guinoDer;
-    
+
+
+    public Controller controller;
+
     public bool guinoIzq;
 
     public bool Balizas;
@@ -36,6 +39,7 @@ public class flechitas : MonoBehaviour
 
     private void Start()
     {
+        controller = FindObjectOfType<Controller>(); 
         rb = GetComponent<Rigidbody>();
           rb.centerOfMass = CenterOfMass.transform.localPosition;
 
@@ -95,6 +99,8 @@ if (Input.GetKeyUp(KeyCode.UpArrow) && !guinoIzq && !Balizas)
         {
             cambiazo = false;
         }
+
+       
     }
 
 
@@ -120,9 +126,11 @@ if (Input.GetKeyUp(KeyCode.UpArrow) && !guinoIzq && !Balizas)
             Debug.Log("Arrancado");
 
         }
+       
+
         // Hacer que funcionen los cambios
 
-            if (/*Input.GetKey(KeyCode.W) == false && Input.GetKeyDown(KeyCode.E) && cambiable */ cambiazo)
+        if (/*Input.GetKey(KeyCode.W) == false && Input.GetKeyDown(KeyCode.E) && cambiable */ cambiazo)
             {
                 cambio += 1;
                 cambiazo = false;

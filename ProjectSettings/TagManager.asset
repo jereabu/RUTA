@@ -26,8 +26,7 @@ TagManager:
   - Aro
   - Blocked
   - DLVL_3
-  - private int currectNode = 0;
-  - Path
+  - WrongWay
   layers:
   - Default
   - TransparentFX
